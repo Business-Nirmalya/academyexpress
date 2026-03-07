@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Tuition Class 6-10 Physics Chemistry Biology | AcademyExpress Odisha</title>
+  <meta name="description" content="Expert Science tuition for Class 6 to 10 students in Odisha. CBSE, ICSE, State Board. Physics, Chemistry, Biology. Home & online tutors in Bhubaneswar, Cuttack.">
+  <!-- same style as homepage: consistent colors, logo, fonts -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    /* header same as homepage (new logo) */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f3b5e;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: #f59e0b;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transform: rotate(-5deg);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-academy {
+      font-size: 1.4rem;
+      color: #0f3b5e;
+    }
+    .logo-express {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f3b5e 0%, #f59e0b 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #0f3b5e;
+      cursor: pointer;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+    .menu-toggle:hover {
+      background: #e2e8f0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: #f59e0b;
+    }
+    .btn {
+      display: inline-block;
+      background: #0f3b5e;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .btn-wa {
+      background: #25D366;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-wa:hover {
+      background: #20b859;
+    }
+    .btn-call {
+      background: #0284c7;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #0f3b5e;
+      border: 2px solid #0f3b5e;
+    }
+    .btn-outline:hover {
+      background: #0f3b5e;
+      color: white;
+    }
+    .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .wa-logo {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-wa .wa-logo {
+      width: 20px;
+      height: 20px;
+    }
+    /* page header specific — but using same color palette */
+    .page-header {
+      background: linear-gradient(145deg, #e0f2fe 0%, #ffffff 80%);
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.8rem;
+      color: #0f3b5e;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .page-header p {
+      font-size: 1.3rem;
+      color: #334155;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      color: #0f3b5e;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #f59e0b;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    .topic-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .topic-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+    }
+    .topic-card h3 {
+      color: #0f3b5e;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .curriculum-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      background: white;
+      padding: 2rem;
+      border-radius: 48px;
+      margin: 2rem 0;
+      border: 1px solid #e2e8f0;
+    }
+    .curriculum-item {
+      text-align: center;
+      min-width: 130px;
+      padding: 1rem 0.5rem;
+      background: #f8fafc;
+      border-radius: 32px;
+      transition: all 0.2s;
+    }
+    .curriculum-item:hover {
+      background: #f59e0b10;
+      border: 1px solid #f59e0b;
+    }
+    .curriculum-item span {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .curriculum-item strong {
+      color: #0f3b5e;
+      font-size: 1.2rem;
+    }
+    .feature-badge {
+      background: #f1f5f9;
+      padding: 2rem;
+      border-radius: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-around;
+      margin: 2.5rem 0;
+      border: 1px solid #e2e8f0;
+    }
+    .feature-badge div {
+      font-weight: 500;
+      background: white;
+      padding: 0.6rem 1.8rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      color: #0f3b5e;
+    }
+    .cta-banner {
+      background: #0f3b5e;
+      color: white;
+      padding: 3.5rem 2rem;
+      border-radius: 60px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-banner .btn-group {
+      justify-content: center;
+      margin-top: 2.2rem;
+    }
+    .cta-banner .btn-outline {
+      background: white;
+      border-color: white;
+      color: #0f3b5e;
+    }
+    .cta-banner .btn-outline:hover {
+      background: #f59e0b;
+      border-color: #f59e0b;
+      color: white;
+    }
+    .form-card {
+      background: white;
+      border-radius: 48px;
+      padding: 2.5rem;
+      border: 1px solid #e2e8f0;
+      max-width: 750px;
+      margin: 2rem auto;
+    }
+    .form-row {
+      margin-bottom: 1.2rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      border-radius: 60px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      background: #f9f9fc;
+    }
+    input:focus, select:focus {
+      outline: 2px solid #f59e0b;
+    }
+    .footer {
+      background: #0f3b5e;
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer a {
+      color: #fbbf24;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .footer-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .footer-cities a {
+      color: #b9d9f5;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      z-index: 100;
+      transition: 0.2s;
+      line-height: 1;
+    }
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.1) rotate(5deg);
+    }
+    .wa-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+    /* responsive */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1.5rem 1rem;
+        border-radius: 24px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        margin-top: 0.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .header-flex {
+        flex-wrap: wrap;
+      }
+      .page-header h1 { font-size: 2.2rem; }
+      .btn-group { flex-direction: column; width: 100%; }
+      .btn { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- floating whatsapp with icon matching homepage -->
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20Science%20tuition%20for%20class%206-10%20in%20Odisha." 
+     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <span class="wa-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- header with new logo (same as homepage) + hamburger -->
+  <header>
+    <div class="container header-flex">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📘</div>
+        <div class="logo-text">
+          <span class="logo-academy">Academy</span>
+          <span class="logo-express">Express</span>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
+        <a href="/blog/">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20Science%20tuition%20for%20class%206-10%20in%20Odisha." class="btn btn-wa" target="_blank">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+919937641801" class="btn btn-call">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE (with home‐style gradient) -->
+  <section class="page-header">
+    <div class="container">
+      <h1>🔬 Science Tuition for Class 6–10</h1>
+      <p>Physics · Chemistry · Biology — conceptual learning for CBSE, ICSE & Odisha Board. Home tuition & online classes across Odisha.</p>
+    </div>
+  </section>
+
+  <!-- KEY HIGHLIGHTS (like homepage card style) -->
+  <div class="container" style="margin-top: 2rem;">
+    <div style="background: white; border-radius: 48px; padding: 2.5rem; border:1px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+      <h2 class="section-title" style="margin-top:0;">Why AcademyExpress for Science?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.2rem;">
+        <div style="background:#f0f9ff; padding:0.8rem 1.2rem; border-radius: 40px; font-weight:500;">✅ Live experiments & demos</div>
+        <div style="background:#f0f9ff; padding:0.8rem 1.2rem; border-radius: 40px; font-weight:500;">✅ Concept maps & easy notes</div>
+        <div style="background:#f0f9ff; padding:0.8rem 1.2rem; border-radius: 40px; font-weight:500;">✅ Weekly objective tests</div>
+        <div style="background:#f0f9ff; padding:0.8rem 1.2rem; border-radius: 40px; font-weight:500;">✅ Numerical practice (Phy/Chem)</div>
+        <div style="background:#f0f9ff; padding:0.8rem 1.2rem; border-radius: 40px; font-weight:500;">✅ Diagram & bio explanation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CURRICULUM OVERVIEW (class 6-10) - eye catching like home steps -->
+  <div class="container">
+    <h2 class="section-title">📚 Class‑wise curriculum</h2>
+    <div class="curriculum-row">
+      <div class="curriculum-item"><span>🌱</span><br><strong>Class 6</strong><br>Food, fibers, motion, electricity</div>
+      <div class="curriculum-item"><span>🌿</span><br><strong>Class 7</strong><br>Nutrition, acids, heat, weather</div>
+      <div class="curriculum-item"><span>⚡</span><br><strong>Class 8</strong><br>Cell, force, sound, light, pollution</div>
+      <div class="curriculum-item"><span>🧪</span><br><strong>Class 9</strong><br>Atoms, tissues, motion, gravitation</div>
+      <div class="curriculum-item"><span>🧬</span><br><strong>Class 10</strong><br>Reactions, light, electricity, life processes</div>
+    </div>
+  </div>
+
+  <!-- SUBJECT CARDS with icons & colors -->
+  <div class="container">
+    <h2 class="section-title">⚛️ Physics · 🧪 Chemistry · 🧬 Biology</h2>
+    <div class="card-grid">
+      <div class="topic-card">
+        <h3>⚛️ Physics</h3>
+        <p><strong>Class 6-8:</strong> Motion, light, sound, electricity, magnets.</p>
+        <p><strong>Class 9-10:</strong> Motion, force, gravitation, work & energy, sound, light (reflection/refraction), human eye, electricity, magnetic effects.</p>
+      </div>
+      <div class="topic-card">
+        <h3>🧪 Chemistry</h3>
+        <p><strong>Class 6-8:</strong> States of matter, separation, acids/bases, metals/non‑metals.</p>
+        <p><strong>Class 9-10:</strong> Matter in surroundings, atoms & molecules, structure of atom, chemical reactions, periodic table, carbon compounds.</p>
+      </div>
+      <div class="topic-card">
+        <h3>🧬 Biology</h3>
+        <p><strong>Class 6-8:</strong> Cell, tissues, plants, animals, reproduction, health.</p>
+        <p><strong>Class 9-10:</strong> Fundamental unit of life, tissues, life processes, control & coordination, reproduction, heredity, environment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOARDS & MODES (colored badges) -->
+  <div class="container">
+    <div class="feature-badge">
+      <div>📘 CBSE pattern</div>
+      <div>📗 ICSE curriculum</div>
+      <div>📙 Odisha State Board</div>
+      <div>🏡 Home tuition</div>
+      <div>💻 Online classes</div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER (like home, but science) -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to explore Science with fun?</h2>
+      <p style="font-size:1.3rem; opacity:0.9;">Get a free demo class or talk to our Science academic head.</p>
+      <div class="btn-group">
+        <a href="contact.html#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Science Tutor</a>
+        <a href="https://wa.me/919937641801?text=I%20need%20Science%20tuition%20for%20class%20[class]%20in%20Odisha" class="btn btn-wa" target="_blank">💬 Chat on WhatsApp</a>
+        <a href="tutor-join.html" class="btn" style="background: #f59e0b; color:#0f3b5e;">👩‍🔬 Join as Science Tutor</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENQUIRY FORM (styled like homepage form-card) -->
+  <div class="container" id="enquiry-form">
+    <h2 class="section-title">📝 Enquire for Science tuition</h2>
+    <div class="form-card">
+      <form id="scienceEnquiry" onsubmit="sendScienceEnquiry(event)">
+        <div class="form-row"><input type="text" placeholder="Student Name" id="sname" required></div>
+        <div class="form-row"><input type="text" placeholder="Class (e.g. 9)" id="sclass" required></div>
+        <div class="form-row"><input type="text" placeholder="City" id="scity" required></div>
+        <div class="form-row"><input type="tel" placeholder="Phone Number" id="sphone" required></div>
+        <div class="form-row">
+          <select id="smode">
+            <option>Home Tuition</option>
+            <option>Online Classes</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-wa" style="width:100%; justify-content: center;">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          Send Science enquiry on WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CITY BUTTONS (like home) -->
+  <div class="container">
+    <h2 class="section-title">📍 Find Science tutors in your city</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 2rem;">
+      <a href="cities/bhubaneswar-home-tuition.html" class="btn btn-outline">Bhubaneswar</a>
+      <a href="cities/cuttack-home-tuition.html" class="btn btn-outline">Cuttack</a>
+      <a href="cities/rourkela-home-tuition.html" class="btn btn-outline">Rourkela</a>
+      <a href="cities/sambalpur-home-tuition.html" class="btn btn-outline">Sambalpur</a>
+      <a href="cities/balasore-home-tuition.html" class="btn btn-outline">Balasore</a>
+      <a href="cities/angul-home-tuition.html" class="btn btn-outline">Angul</a>
+      <a href="cities/jajpur-home-tuition.html" class="btn btn-outline">Jajpur</a>
+      <a href="cities/berhampur-home-tuition.html" class="btn btn-outline">Berhampur</a>
+      <a href="cities/jharsuguda-home-tuition.html" class="btn btn-outline">Jharsuguda</a>
+      <a href="cities/puri-home-tuition.html" class="btn btn-outline">Puri</a>
+    </div>
+  </div>
+
+  <!-- FOOTER (exact same as homepage) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <div>
+          <h4>AcademyExpress</h4>
+          <p>Maths & Science tuition<br>Class 6–10 across Odisha</p>
+          <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
+          <a href="https://wa.me/919937641801">
+            <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#fbbf24; width:16px; height:16px;">
+              <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </p>
+        </div>
+        <div>
+          <h4>City quick links</h4>
+          <div class="footer-cities">
+            <a href="cities/bhubaneswar-home-tuition.html">Bhubaneswar</a>
+            <a href="cities/cuttack-home-tuition.html">Cuttack</a>
+            <a href="cities/rourkela-home-tuition.html">Rourkela</a>
+            <a href="cities/sambalpur-home-tuition.html">Sambalpur</a>
+            <a href="cities/angul-home-tuition.html">Angul</a>
+            <a href="cities/balasore-home-tuition.html">Balasore</a>
+            <a href="cities/jajpur-home-tuition.html">Jajpur</a>
+          </div>
+        </div>
+        <div>
+          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
+          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- HAMBURGER + FORM SCRIPT (same behavior) -->
+  <script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        nav.classList.toggle('show');
+      });
+    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 860) {
+          nav.classList.remove('show');
+        }
+      });
+    });
+
+    function sendScienceEnquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('sname').value.trim();
+      const cls = document.getElementById('sclass').value.trim();
+      const city = document.getElementById('scity').value.trim();
+      const phone = document.getElementById('sphone').value.trim();
+      const mode = document.getElementById('smode').value;
+      const message = `*Science tuition enquiry*%0AStudent: ${name}%0AClass: ${cls}%0ACity: ${city}%0APhone: ${phone}%0AMode: ${mode}`;
+      window.open(`https://wa.me/919937641801?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
