@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as Tutor | AcademyExpress – Maths & Science Teaching Jobs Odisha</title>
+  <meta name="description" content="Become a tutor with AcademyExpress. Teach Maths and Science to Class 6-10 students in Odisha. Home tuition and online classes. Register now.">
+  <!-- EXACT same style as homepage - copied directly from index.html -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    /* header */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    /* New Logo Styling - exactly like homepage */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f3b5e;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: #f59e0b;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transform: rotate(-5deg);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-academy {
+      font-size: 1.4rem;
+      color: #0f3b5e;
+    }
+    .logo-express {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f3b5e 0%, #f59e0b 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    /* hamburger menu */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #0f3b5e;
+      cursor: pointer;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+    .menu-toggle:hover {
+      background: #e2e8f0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: #f59e0b;
+    }
+    .btn {
+      display: inline-block;
+      background: #0f3b5e;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .btn-wa {
+      background: #25D366;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-wa:hover {
+      background: #20b859;
+    }
+    .btn-call {
+      background: #0284c7;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #0f3b5e;
+      border: 2px solid #0f3b5e;
+    }
+    .btn-outline:hover {
+      background: #0f3b5e;
+      color: white;
+    }
+    .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    /* whatsapp logo svg style */
+    .wa-logo {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-wa .wa-logo {
+      width: 20px;
+      height: 20px;
+    }
+    .footer .wa-logo {
+      fill: #fbbf24;
+      width: 16px;
+      height: 16px;
+      margin-right: 2px;
+    }
+    /* hero - reused for page header to match homepage style */
+    .hero {
+      background: linear-gradient(145deg, #e6f0fa 0%, #ffffff 80%);
+      padding: 3rem 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: #0f3b5e;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      color: #334155;
+      margin-bottom: 2rem;
+    }
+    /* cards */
+    .section-title {
+      font-size: 2.2rem;
+      color: #0f3b5e;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #f59e0b;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.8rem;
+    }
+    .card {
+      background: white;
+      padding: 1.8rem 1.2rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #0f3b5e;
+    }
+    .city-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem 1.2rem;
+      margin-top: 1rem;
+    }
+    .city-links a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #94a3b8;
+    }
+    .city-links a:hover {
+      color: #f59e0b;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .step {
+      background: white;
+      padding: 2rem 1rem;
+      border-radius: 2rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    }
+    .step h3 {
+      font-size: 1.8rem;
+      color: #f59e0b;
+    }
+    /* forms */
+    .form-card {
+      background: white;
+      border-radius: 48px;
+      padding: 3rem;
+      border: 1px solid #e2e8f0;
+      max-width: 800px;
+      margin: 2rem auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .form-row {
+      margin-bottom: 1.5rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 60px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      background: #f9f9fc;
+      transition: all 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #f59e0b;
+      border-color: transparent;
+    }
+    textarea {
+      border-radius: 30px;
+      resize: vertical;
+    }
+    /* benefits cards (matching homepage card style) */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .benefit-card {
+      background: white;
+      padding: 2.5rem 1.5rem;
+      border-radius: 32px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+    }
+    .benefit-card .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card h3 {
+      color: #0f3b5e;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .testimonial-section {
+      background: #f1f5f9;
+      border-radius: 48px;
+      padding: 3rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 32px;
+      max-width: 300px;
+      border: 1px solid #e2e8f0;
+    }
+    .testimonial-card p {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .testimonial-card strong {
+      color: #0f3b5e;
+    }
+    .cta-banner {
+      background: #0f3b5e;
+      color: white;
+      padding: 3.5rem 2rem;
+      border-radius: 60px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-banner .btn-group {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .cta-banner .btn-outline {
+      background: white;
+      border-color: white;
+      color: #0f3b5e;
+    }
+    .cta-banner .btn-outline:hover {
+      background: #f59e0b;
+      border-color: #f59e0b;
+      color: white;
+    }
+    .footer {
+      background: #0f3b5e;
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer a {
+      color: #fbbf24;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .footer-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .footer-cities a {
+      color: #b9d9f5;
+    }
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      z-index: 100;
+      transition: 0.2s;
+      line-height: 1;
+    }
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.1) rotate(5deg);
+    }
+    .wa-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+    /* mobile responsive */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1.5rem 1rem;
+        border-radius: 24px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        margin-top: 0.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .header-flex {
+        flex-wrap: wrap;
+      }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+      .steps { grid-template-columns: 1fr; }
+      .btn-group { flex-direction: column; width: 100%; }
+      .btn { text-align: center; }
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+      }
+      .logo-academy {
+        font-size: 1.2rem;
+      }
+      .logo-express {
+        font-size: 1.5rem;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-card {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- floating whatsapp button - exactly like homepage -->
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20want%20to%20join%20as%20a%20tutor." 
+     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <span class="wa-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- header with new logo - exactly like homepage -->
+  <header>
+    <div class="container header-flex">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📘</div>
+        <div class="logo-text">
+          <span class="logo-academy">Academy</span>
+          <span class="logo-express">Express</span>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
+        <a href="/blog/">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20want%20to%20join%20as%20a%20tutor." class="btn btn-wa" target="_blank">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+919937641801" class="btn btn-call">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER using hero class to match homepage exactly -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Join as Tutor</h1>
+        <p>Become a part of Odisha's growing tuition platform. Teach Maths & Science to Class 6–10 students.</p>
+        <div class="btn-group">
+          <a href="#tutor-form" class="btn btn-outline">📋 Apply Now</a>
+          <a href="https://wa.me/919937641801?text=I%20want%20to%20join%20as%20a%20tutor%20at%20AcademyExpress." class="btn btn-wa" target="_blank">
+            <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+            </svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+          <a href="contact.html#enquiry-form" class="btn">📝 Student Enquiry</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://placehold.co/600x400/0f3b5e/white?text=Join+Our+Tutor+Team" alt="Join as Tutor" style="max-width:100%; border-radius: 40px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- benefits section with homepage card style -->
+  <div class="container">
+    <h2 class="section-title" style="text-align: center;">Why tutor with AcademyExpress?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="icon">💰</div>
+        <h3>Competitive Pay</h3>
+        <p>Earn up to ₹30,000/month based on experience & performance</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🏠</div>
+        <h3>Work from Home</h3>
+        <p>Choose home tuition near you or online classes from home</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📚</div>
+        <h3>Teach Your Way</h3>
+        <p>Flexible hours, choose subjects and classes you love</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎯</div>
+        <h3>Regular Students</h3>
+        <p>Steady flow of students from across Odisha</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- main registration form -->
+  <div class="container" id="tutor-form">
+    <div class="form-card">
+      <h2 style="color: #0f3b5e; margin-bottom: 2rem; text-align: center; font-size: 2rem;">📋 Tutor Registration Form</h2>
+      <form id="tutorJoinForm" onsubmit="sendTutorRegistration(event)">
+        <div class="form-grid">
+          <div class="form-row">
+            <input type="text" placeholder="Full Name *" id="tutorName" required>
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="Qualification (e.g., M.Sc, B.Ed) *" id="tutorQual" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row">
+            <input type="text" placeholder="Subjects you teach (e.g., Maths, Science) *" id="tutorSubjects" required>
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="City you prefer *" id="tutorCity" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row">
+            <input type="number" placeholder="Years of Teaching Experience *" id="tutorExp" min="0" step="1" required>
+          </div>
+          <div class="form-row">
+            <input type="tel" placeholder="Phone Number (10 digits) *" id="tutorPhone" pattern="[0-9]{10}" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <select id="tutorMode" required>
+            <option value="" disabled selected>Preferred mode of teaching *</option>
+            <option>Home Tuition only</option>
+            <option>Online only</option>
+            <option>Both Home & Online</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <select id="tutorBoard" required>
+            <option value="" disabled selected>Boards you can teach *</option>
+            <option>CBSE</option>
+            <option>ICSE</option>
+            <option>Odisha State Board</option>
+            <option>All Boards</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <textarea id="tutorAddress" rows="3" placeholder="Your current address (area, city, pin) *" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <textarea id="tutorBio" rows="4" placeholder="Brief introduction about yourself, teaching style, achievements (optional)"></textarea>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn btn-wa" style="width:100%; padding:1.2rem; font-size:1.2rem; justify-content: center;">
+            <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+            </svg>
+            Submit Application on WhatsApp
+          </button>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; font-size:0.9rem; color:#64748b;">Your details will be sent to our academic coordinator via WhatsApp. We'll contact you within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- testimonial section with homepage card style -->
+  <div class="container">
+    <div class="testimonial-section">
+      <h2 style="color: #0f3b5e; margin-bottom: 2rem; font-size: 2rem;">What our tutors say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"AcademyExpress gave me my first tutoring opportunity. Now I teach 8 students in Bhubaneswar."</p>
+          <strong>– Priyanka, Maths Tutor</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>"Flexible timing and regular payments. I love the online teaching platform."</p>
+          <strong>– Amiya, Science Tutor</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA banner with required buttons -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to inspire young minds?</h2>
+      <p style="font-size:1.2rem; opacity:0.9; margin-bottom:1rem;">Fill the form above or reach out directly</p>
+      <div class="btn-group">
+        <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+        <a href="tel:+919937641801" class="btn btn-call">📞 Call Now</a>
+        <a href="contact.html#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Student Enquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- city links for tutors (where we need tutors) -->
+  <div class="container" style="text-align: center; margin: 2rem auto;">
+    <h2 class="section-title">📍 Tutors needed in these cities</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 2rem;">
+      <a href="cities/bhubaneswar-home-tuition.html" class="btn btn-outline">Bhubaneswar</a>
+      <a href="cities/cuttack-home-tuition.html" class="btn btn-outline">Cuttack</a>
+      <a href="cities/rourkela-home-tuition.html" class="btn btn-outline">Rourkela</a>
+      <a href="cities/sambalpur-home-tuition.html" class="btn btn-outline">Sambalpur</a>
+      <a href="cities/balasore-home-tuition.html" class="btn btn-outline">Balasore</a>
+      <a href="cities/angul-home-tuition.html" class="btn btn-outline">Angul</a>
+      <a href="cities/jajpur-home-tuition.html" class="btn btn-outline">Jajpur</a>
+      <a href="cities/berhampur-home-tuition.html" class="btn btn-outline">Berhampur</a>
+      <a href="cities/puri-home-tuition.html" class="btn btn-outline">Puri</a>
+      <a href="cities/jharsuguda-home-tuition.html" class="btn btn-outline">Jharsuguda</a>
+    </div>
+  </div>
+
+  <!-- FOOTER - exactly like homepage -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <div>
+          <h4>AcademyExpress</h4>
+          <p>Maths & Science tuition<br>Class 6–10 across Odisha</p>
+          <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
+          <a href="https://wa.me/919937641801">
+            <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </p>
+        </div>
+        <div>
+          <h4>City quick links</h4>
+          <div class="footer-cities">
+            <a href="cities/bhubaneswar-home-tuition.html">Bhubaneswar</a>
+            <a href="cities/cuttack-home-tuition.html">Cuttack</a>
+            <a href="cities/rourkela-home-tuition.html">Rourkela</a>
+            <a href="cities/sambalpur-home-tuition.html">Sambalpur</a>
+            <a href="cities/angul-home-tuition.html">Angul</a>
+            <a href="cities/balasore-home-tuition.html">Balasore</a>
+            <a href="cities/jajpur-home-tuition.html">Jajpur</a>
+            <a href="cities/berhampur-home-tuition.html">Berhampur</a>
+          </div>
+        </div>
+        <div>
+          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
+          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // hamburger toggle - exactly like homepage
+    const toggleBtn = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        nav.classList.toggle('show');
+      });
+    }
+
+    // close hamburger menu when a link is clicked
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 860) {
+          nav.classList.remove('show');
+        }
+      });
+    });
+
+    // tutor registration form submission
+    function sendTutorRegistration(e) {
+      e.preventDefault();
+      
+      // get all values
+      const name = document.getElementById('tutorName').value.trim();
+      const qual = document.getElementById('tutorQual').value.trim();
+      const subjects = document.getElementById('tutorSubjects').value.trim();
+      const city = document.getElementById('tutorCity').value.trim();
+      const exp = document.getElementById('tutorExp').value.trim();
+      const phone = document.getElementById('tutorPhone').value.trim();
+      const mode = document.getElementById('tutorMode').value;
+      const board = document.getElementById('tutorBoard').value;
+      const address = document.getElementById('tutorAddress').value.trim();
+      const bio = document.getElementById('tutorBio').value.trim();
+
+      // build message
+      let msg = `*New Tutor Application - AcademyExpress*%0A`;
+      msg += `👤 Name: ${name}%0A`;
+      msg += `🎓 Qualification: ${qual}%0A`;
+      msg += `📚 Subjects: ${subjects}%0A`;
+      msg += `📍 City: ${city}%0A`;
+      msg += `⏳ Experience: ${exp} years%0A`;
+      msg += `📞 Phone: ${phone}%0A`;
+      msg += `🖥️ Mode: ${mode}%0A`;
+      msg += `📘 Boards: ${board}%0A`;
+      msg += `🏠 Address: ${address}%0A`;
+      if (bio) {
+        msg += `📝 Bio: ${bio}%0A`;
+      }
+
+      // encode and open whatsapp
+      const waLink = `https://wa.me/919937641801?text=${msg}`;
+      window.open(waLink, '_blank');
+      
+      // show thank you message
+      alert('Thank you for applying! Your details have been sent via WhatsApp. We will contact you soon.');
+    }
+  </script>
+</body>
+</html>
