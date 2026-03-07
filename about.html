@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About AcademyExpress – Maths & Science Tutoring Odisha</title>
+  <meta name="description" content="Learn about AcademyExpress: our mission to provide quality Maths and Science tuition for Class 6-10 students across Odisha. Experienced tutors, home & online.">
+  <!-- same style as homepage: consistent colors, logo, fonts, hamburger, etc -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    /* header same as homepage (new logo) */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f3b5e;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: #f59e0b;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transform: rotate(-5deg);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-academy {
+      font-size: 1.4rem;
+      color: #0f3b5e;
+    }
+    .logo-express {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f3b5e 0%, #f59e0b 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    /* hamburger menu */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #0f3b5e;
+      cursor: pointer;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+    .menu-toggle:hover {
+      background: #e2e8f0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: #f59e0b;
+    }
+    .btn {
+      display: inline-block;
+      background: #0f3b5e;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .btn-wa {
+      background: #25D366;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-wa:hover {
+      background: #20b859;
+    }
+    .btn-call {
+      background: #0284c7;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #0f3b5e;
+      border: 2px solid #0f3b5e;
+    }
+    .btn-outline:hover {
+      background: #0f3b5e;
+      color: white;
+    }
+    .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .wa-logo {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn-wa .wa-logo {
+      width: 20px;
+      height: 20px;
+    }
+    /* page specific – but with homepage flair */
+    .page-header {
+      background: linear-gradient(145deg, #e6f0fa 0%, #ffffff 80%);
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.8rem;
+      color: #0f3b5e;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .page-header p {
+      font-size: 1.3rem;
+      color: #334155;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      color: #0f3b5e;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #f59e0b;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin: 3rem 0;
+    }
+    .about-text p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #334155;
+    }
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .value-card {
+      background: white;
+      padding: 2.5rem 1.5rem;
+      border-radius: 32px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s, border-color 0.2s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+    }
+    .value-card .icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .value-card h3 {
+      color: #0f3b5e;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+      margin: 3rem 0;
+    }
+    .stat-item {
+      background: #0f3b5e;
+      color: white;
+      padding: 2.2rem 1rem;
+      border-radius: 32px;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(0,59,94,0.2);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #f59e0b;
+    }
+    .stat-label {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .feature-box {
+      background: white;
+      border-radius: 48px;
+      padding: 3rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      margin: 3rem 0;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature-item h3 {
+      color: #f59e0b;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .team-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .team-card {
+      text-align: center;
+      max-width: 200px;
+    }
+    .team-avatar {
+      background: linear-gradient(145deg, #0f3b5e, #1e4b6e);
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: #f59e0b;
+      border: 4px solid #f59e0b;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .cta-banner {
+      background: #0f3b5e;
+      color: white;
+      padding: 3.5rem 2rem;
+      border-radius: 60px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-banner .btn-group {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .cta-banner .btn-outline {
+      background: white;
+      border-color: white;
+      color: #0f3b5e;
+    }
+    .cta-banner .btn-outline:hover {
+      background: #f59e0b;
+      border-color: #f59e0b;
+      color: white;
+    }
+    .footer {
+      background: #0f3b5e;
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer a {
+      color: #fbbf24;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .footer-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .footer-cities a {
+      color: #b9d9f5;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      z-index: 100;
+      transition: 0.2s;
+      line-height: 1;
+    }
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.1) rotate(5deg);
+    }
+    .wa-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: white;
+    }
+    /* responsive */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1.5rem 1rem;
+        border-radius: 24px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        margin-top: 0.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .header-flex {
+        flex-wrap: wrap;
+      }
+      .page-header h1 { font-size: 2.2rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .btn-group { flex-direction: column; width: 100%; }
+      .btn { text-align: center; }
+      .team-row { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- floating whatsapp with SVG (like home) -->
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20visiting%20the%20About%20page%20and%20have%20a%20question." 
+     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <span class="wa-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- header with new logo (same as homepage) + hamburger -->
+  <header>
+    <div class="container header-flex">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">📘</div>
+        <div class="logo-text">
+          <span class="logo-academy">Academy</span>
+          <span class="logo-express">Express</span>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
+        <a href="/blog/">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question%20from%20About%20page." class="btn btn-wa" target="_blank">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+919937641801" class="btn btn-call">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE (homepage style gradient) -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About AcademyExpress</h1>
+      <p>Odisha's trusted platform for Maths & Science tuition (Class 6–10)</p>
+    </div>
+  </section>
+
+  <!-- MISSION & STORY with image (same layout but enhanced) -->
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Our Mission</h2>
+        <p>At AcademyExpress, we bridge the gap between students and quality Maths & Science education across Odisha. Founded with a vision to make excellent tutoring accessible in every city — from Bhubaneswar to Rourkela, Cuttack to Sambalpur.</p>
+        <p>We believe every child deserves personalised attention. That's why we connect Class 6–10 students with experienced tutors who focus on conceptual clarity, board exam preparation, and building strong fundamentals for future competitive exams.</p>
+        <p>With both home tuition and online classes, we cater to CBSE, ICSE, and Odisha State Board curricula. Our tutors are carefully selected, background-verified, and trained to deliver engaging lessons.</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/600x500/0f3b5e/white?text=AcademyExpress+Odisha" alt="About AcademyExpress" style="max-width:100%; border-radius: 48px; box-shadow: 0 20px 30px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE VALUES (now with enhanced cards like homepage) -->
+  <div class="container">
+    <h2 class="section-title">💡 Our Core Values</h2>
+    <div class="values-list">
+      <div class="value-card">
+        <div class="icon">🎯</div>
+        <h3>Quality First</h3>
+        <p>Rigorous tutor selection & regular training</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🤝</div>
+        <h3>Personalised</h3>
+        <p>Custom learning plans for every student</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">📊</div>
+        <h3>Results Driven</h3>
+        <p>Regular assessments & progress tracking</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🌍</div>
+        <h3>Wide Reach</h3>
+        <p>20+ cities across Odisha, expanding</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS / IMPACT (UPDATED with 1500+ students, 100+ tutors, 20+ cities) -->
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">1500+</div>
+        <div class="stat-label">Happy Students</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Expert Tutors</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Cities Covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Positive Feedback</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT MAKES US DIFFERENT (feature box with orange highlights) -->
+  <div class="container">
+    <div class="feature-box">
+      <h2 class="section-title" style="margin-top:0;">🌟 Why Odisha trusts AcademyExpress</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>📚 Dual focus</h3>
+          <p>Specialised in only Maths & Science – we do one thing, perfectly.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🏠 Home & Online</h3>
+          <p>Flexibility of both modes. Students can choose comfort or convenience.</p>
+        </div>
+        <div class="feature-item">
+          <h3>📋 Board expertise</h3>
+          <p>Separate batches for CBSE, ICSE, and Odisha State Board (BSE).</p>
+        </div>
+        <div class="feature-item">
+          <h3>📞 Parent updates</h3>
+          <p>Regular progress reports and parent-teacher meetings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUTOR COMMUNITY (now with fancy avatars and consistent style) -->
+  <div class="container">
+    <h2 class="section-title">👩‍🏫 Our Tutor Community</h2>
+    <div class="team-row">
+      <div class="team-card">
+        <div class="team-avatar">🎓</div>
+        <h4>Experienced B.Ed/M.Sc</h4>
+        <p style="color:#334155;">From Odisha's top colleges</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">✅</div>
+        <h4>Vetted & trained</h4>
+        <p style="color:#334155;">Background check + demo</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🗣️</div>
+        <h4>Local language</h4>
+        <p style="color:#334155;">Odia, Hindi, English</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER (with same style as homepage) -->
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Join the AcademyExpress family</h2>
+      <p style="font-size:1.2rem; opacity:0.9;">Whether you're a student looking for a tutor, or a teacher wanting to join us.</p>
+      <div class="btn-group">
+        <a href="contact.html#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Tutor</a>
+        <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank">💬 Chat on WhatsApp</a>
+        <a href="tutor-join.html" class="btn" style="background: #f59e0b; color:#0f3b5e;">👩‍🏫 Join as Tutor</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CITY EXPLORER (same as homepage style) -->
+  <div class="container" style="text-align: center; margin: 2rem auto;">
+    <h2 class="section-title">📍 Find us in your city</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 2rem;">
+      <a href="cities/bhubaneswar-home-tuition.html" class="btn btn-outline">Bhubaneswar</a>
+      <a href="cities/cuttack-home-tuition.html" class="btn btn-outline">Cuttack</a>
+      <a href="cities/rourkela-home-tuition.html" class="btn btn-outline">Rourkela</a>
+      <a href="cities/sambalpur-home-tuition.html" class="btn btn-outline">Sambalpur</a>
+      <a href="cities/balasore-home-tuition.html" class="btn btn-outline">Balasore</a>
+      <a href="cities/angul-home-tuition.html" class="btn btn-outline">Angul</a>
+      <a href="cities/jajpur-home-tuition.html" class="btn btn-outline">Jajpur</a>
+      <a href="cities/berhampur-home-tuition.html" class="btn btn-outline">Berhampur</a>
+      <a href="cities/puri-home-tuition.html" class="btn btn-outline">Puri</a>
+      <a href="cities/jharsuguda-home-tuition.html" class="btn btn-outline">Jharsuguda</a>
+    </div>
+  </div>
+
+  <!-- FOOTER (exact same as homepage) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <div>
+          <h4>AcademyExpress</h4>
+          <p>Maths & Science tuition<br>Class 6–10 across Odisha</p>
+          <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
+          <a href="https://wa.me/919937641801">
+            <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:#fbbf24; width:16px; height:16px;">
+              <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </p>
+        </div>
+        <div>
+          <h4>City quick links</h4>
+          <div class="footer-cities">
+            <a href="cities/bhubaneswar-home-tuition.html">Bhubaneswar</a>
+            <a href="cities/cuttack-home-tuition.html">Cuttack</a>
+            <a href="cities/rourkela-home-tuition.html">Rourkela</a>
+            <a href="cities/sambalpur-home-tuition.html">Sambalpur</a>
+            <a href="cities/angul-home-tuition.html">Angul</a>
+            <a href="cities/balasore-home-tuition.html">Balasore</a>
+            <a href="cities/jajpur-home-tuition.html">Jajpur</a>
+            <a href="cities/berhampur-home-tuition.html">Berhampur</a>
+          </div>
+        </div>
+        <div>
+          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
+          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- HAMBURGER SCRIPT (same as homepage) -->
+  <script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        nav.classList.toggle('show');
+      });
+    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 860) {
+          nav.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
