@@ -387,6 +387,21 @@
     .footer-cities a {
       color: #b9d9f5;
     }
+    /* Sitemap link styling */
+    .sitemap-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .sitemap-link a {
+      color: #fbbf24;
+      text-decoration: none;
+      border-bottom: 1px dotted #fbbf24;
+    }
+    .sitemap-link a:hover {
+      opacity: 1;
+      border-bottom: 1px solid #fbbf24;
+    }
     /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
@@ -667,7 +682,11 @@
         <div>
           <!-- footer blog link also updated to /blog/ -->
           <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
-          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a>
+          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a><br>
+          <!-- Sitemap link added here -->
+          <div class="sitemap-link">
+            <a href="/sitemap.xml">📊 Sitemap</a>
+          </div>
         </div>
       </div>
       <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
