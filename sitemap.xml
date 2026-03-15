@@ -1,96 +1,266 @@
-<url>
-<loc>https://academyexpress.in/</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/index.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/services.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/bhubaneswar-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/blog/</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/about.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/contact.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/tutor-join.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/maths-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/science-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/jajpur-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/cuttack-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/rourkela-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/sambalpur-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/berhampur-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/balasore-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/puri-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/angul-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://academyexpress.in/cities/jharsuguda-home-tuition.html</loc>
-<lastmod>2026-03-09T14:43:53+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- HIGH PRIORITY PAGES (Priority 1.0 - 0.9) -->
+    <url>
+        <loc>https://academyexpress.in/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.00</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/index.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/tutor-join.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/blog/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- MEDIUM PRIORITY PAGES (Priority 0.8) -->
+    <url>
+        <loc>https://academyexpress.in/services.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/about.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/contact.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/maths-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/science-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- CITY PAGES (Priority 0.7) -->
+    <url>
+        <loc>https://academyexpress.in/cities/bhubaneswar-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/cuttack-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/rourkela-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/sambalpur-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/berhampur-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/balasore-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/puri-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/angul-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/jharsuguda-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/jajpur-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- ADDITIONAL CITIES FROM YOUR HTML (Priority 0.6) -->
+    <url>
+        <loc>https://academyexpress.in/cities/paradip-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/bhadrak-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/baripada-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/kendujhara-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/dhenkanal-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/rayagada-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/cities/koraput-home-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+
+    <!-- CLASS-SPECIFIC PAGES (Recommended) -->
+    <url>
+        <loc>https://academyexpress.in/class-6-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/class-7-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/class-8-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/class-9-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/class-10-tuition.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- TUITION MODE PAGES -->
+    <url>
+        <loc>https://academyexpress.in/home-tuition-odisha.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/online-tuition-odisha.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- LEGAL PAGES (Low Priority) -->
+    <url>
+        <loc>https://academyexpress.in/privacy-policy.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.30</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/terms-conditions.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.30</priority>
+    </url>
+    
+    <url>
+        <loc>https://academyexpress.in/refund-policy.html</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.30</priority>
+    </url>
+
 </urlset>
