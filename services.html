@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Tutoring Services | Maths & Science | AcademyExpress Odisha</title>
-  <meta name="description" content="Explore AcademyExpress tutoring services: Maths, Science, Home Tuition, Online Classes, Small Group Tuition for Class 6-10 students across Odisha. Enroll today!">
+  <title>Our Tutoring Services: Maths & Science Class 6-10 | AcademyExpress Odisha, India & Global</title>
+  <meta name="description" content="Explore AcademyExpress tutoring services: Maths, Science, Home Tuition in Odisha, Online Pan-India, and Global tuition for Class 6-10 students. CBSE, ICSE, State Boards, IGCSE, IB, Common Core. Low cost ₹300–600/hr or $15–20/hr.">
+  <meta name="keywords" content="tuition services, maths tuition, science tuition, home tuition Odisha, online classes India, global tuition, CBSE science, ICSE maths, IGCSE tutor, IB tutor, USA science tutor, Gulf tuition">
+  <meta name="author" content="AcademyExpress">
+  <link rel="canonical" href="https://www.academyexpress.in/services.html">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Tutoring Services: Maths & Science Class 6-10 | AcademyExpress">
+  <meta property="og:description" content="Personalised Maths & Science tuition for Class 6-10. Home tuition in Odisha, online pan-India, and global. All curricula covered.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0f3b5e/white?text=AcademyExpress+Services">
+  <meta property="og:url" content="https://www.academyexpress.in/services.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     * {
       margin: 0;
@@ -37,7 +47,7 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    /* Logo styling (matches homepage) */
+    /* Logo styling */
     .logo {
       display: flex;
       align-items: center;
@@ -184,7 +194,7 @@
     .page-header p {
       font-size: 1.3rem;
       color: #334155;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
     }
     .section-title {
@@ -232,6 +242,65 @@
     .service-link:hover {
       border-bottom-color: #f59e0b;
     }
+    /* global & india cards */
+    .global-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .global-card {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+      border: 1px solid #e2e8f0;
+      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .global-card:hover {
+      transform: scale(1.02);
+      border-color: #f59e0b;
+    }
+    .global-card h3 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: #0f3b5e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .global-card .price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #f59e0b;
+      margin: 0.5rem 0 0.25rem;
+    }
+    .global-card .curriculum {
+      font-size: 1rem;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 0.4rem 1rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 1rem 0 0.5rem;
+    }
+    .global-card .btn-small {
+      margin-top: 1.2rem;
+      background: transparent;
+      border: 2px solid #0f3b5e;
+      color: #0f3b5e;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .global-card .btn-small:hover {
+      background: #0f3b5e;
+      color: white;
+    }
     .cta-banner {
       background: #0f3b5e;
       color: white;
@@ -248,7 +317,6 @@
       justify-content: center;
       margin-top: 2rem;
     }
-    /* why choose us boxes */
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -269,7 +337,6 @@
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
     }
-    /* boards covered */
     .boards-container {
       display: flex;
       flex-wrap: wrap;
@@ -290,32 +357,61 @@
       display: block;
       margin-bottom: 0.5rem;
     }
-    /* quick enquiry form */
-    .quick-enquiry-card {
+    /* FIXED ENQUIRY FORM - Professional styling matching other pages */
+    .enquiry-card {
       background: white;
       border-radius: 48px;
-      padding: 2rem;
+      padding: 2.5rem;
       border: 1px solid #e2e8f0;
       max-width: 800px;
       margin: 2rem auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
     }
-    .quick-enquiry-grid {
+    .enquiry-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
     }
-    .quick-enquiry-grid input {
+    .enquiry-grid input,
+    .enquiry-grid select {
       width: 100%;
-      padding: 0.9rem 1.2rem;
+      padding: 1rem 1.2rem;
       border-radius: 60px;
       border: 1px solid #cbd5e1;
       font-size: 1rem;
       background: #f9f9fc;
+      transition: all 0.2s;
     }
-    .quick-enquiry-grid input:focus {
+    .enquiry-grid input:focus,
+    .enquiry-grid select:focus {
       outline: 2px solid #f59e0b;
+      border-color: transparent;
+      background: white;
     }
-    /* map section (copied from homepage) */
+    .enquiry-grid select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f3b5e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1.2rem center;
+      background-size: 1.2rem;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+    .enquiry-submit {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1rem;
+      font-size: 1.1rem;
+      justify-content: center;
+      background: #25D366;
+      border-radius: 60px;
+      transition: background 0.2s;
+    }
+    .enquiry-submit:hover {
+      background: #20b859;
+    }
     .map-wrapper {
       position: relative;
       width: 100%;
@@ -361,7 +457,6 @@
       text-align: right;
       width: 100%;
       max-width: 800px;
-      height: auto;
       aspect-ratio: 500 / 450;
       border-radius: 32px;
       overflow: hidden;
@@ -381,7 +476,6 @@
     .gme-generated-link {
       display: none !important;
     }
-    /* footer */
     .footer {
       background: #0f3b5e;
       color: white;
@@ -410,7 +504,6 @@
     .footer-cities a {
       color: #b9d9f5;
     }
-    /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
       bottom: 24px;
@@ -439,7 +532,6 @@
       height: 36px;
       fill: white;
     }
-    /* mobile responsive */
     @media (max-width: 860px) {
       .menu-toggle {
         display: block;
@@ -465,8 +557,11 @@
       .page-header h1 { font-size: 2.2rem; }
       .btn-group { flex-direction: column; width: 100%; }
       .btn { text-align: center; }
-      .quick-enquiry-grid {
+      .enquiry-grid {
         grid-template-columns: 1fr;
+      }
+      .full-width {
+        grid-column: span 1;
       }
       .map-overlay {
         max-width: 100%;
@@ -486,8 +581,8 @@
   </style>
 </head>
 <body>
-  <!-- floating whatsapp button with logo -->
-  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20class%206-10%20(Maths%2FScience)%20in%20Odisha.%20Please%20share%20details." 
+  <!-- floating whatsapp button -->
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20class%206-10%20(Maths%2FScience)%20in%20India%20/%20abroad.%20Please%20share%20details." 
      class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
     <span class="wa-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -496,7 +591,7 @@
     </span>
   </a>
 
-  <!-- header with new logo -->
+  <!-- header with logo -->
   <header>
     <div class="container header-flex">
       <a href="index.html" class="logo">
@@ -511,11 +606,11 @@
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
-        <a href="blog.html">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
-        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20class%206-10%20in%20Odisha." class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20class%206-10%20in%20India%20/%20abroad." class="btn btn-wa" target="_blank">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -530,82 +625,165 @@
   <section class="page-header">
     <div class="container">
       <h1>Our Tutoring Services</h1>
-      <p>Personalised Maths & Science coaching for Class 6–10 (CBSE, ICSE, State Board) across Odisha</p>
+      <p>Personalised Maths & Science coaching for Class 6–10 — Home tuition in Odisha · Online Pan-India · Global from $15/hr. All curricula: CBSE, ICSE, State Boards, IGCSE, IB, Common Core.</p>
     </div>
   </section>
 
-  <!-- main services list -->
+  <!-- NEW PAN INDIA ONLINE SERVICES SECTION -->
+  <div class="container" style="margin-top: 2rem;">
+    <h2 class="section-title">🇮🇳 Online tuition for all Indian states · from ₹300/hour</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Live Maths & Science classes for Class 6–10, delivered by expert tutors. We cover CBSE, ICSE, and all state boards.</p>
+    <div class="global-grid">
+      <!-- North India -->
+      <div class="global-card">
+        <h3>🚩 North India</h3>
+        <div class="price">₹300–500 / hour</div>
+        <span class="curriculum">CBSE · ICSE · HP Board · Punjab · UP · JAC</span>
+        <p style="margin: 0.8rem 0;">Delhi, UP, Punjab, Haryana, Himachal, J&K, Uttarakhand.</p>
+        <a href="india/north-india-tuition.html" class="btn-small">North details →</a>
+      </div>
+      <!-- South India -->
+      <div class="global-card">
+        <h3>🌴 South India</h3>
+        <div class="price">₹350–600 / hour</div>
+        <span class="curriculum">CBSE · ICSE · Karnataka · Kerala · Tamil Nadu · AP & TS</span>
+        <p style="margin: 0.8rem 0;">Bengaluru, Chennai, Hyderabad, Kerala, etc.</p>
+        <a href="india/south-india-tuition.html" class="btn-small">South details →</a>
+      </div>
+      <!-- East & Northeast -->
+      <div class="global-card">
+        <h3>🌄 East & Northeast</h3>
+        <div class="price">₹300–500 / hour</div>
+        <span class="curriculum">CBSE · ICSE · WB Board · Assam · SEBA · AHSEC</span>
+        <p style="margin: 0.8rem 0;">West Bengal, Assam, Bihar, Jharkhand, NE states.</p>
+        <a href="india/east-india-tuition.html" class="btn-small">East details →</a>
+      </div>
+      <!-- West & Central -->
+      <div class="global-card">
+        <h3>⛰️ West & Central</h3>
+        <div class="price">₹300–550 / hour</div>
+        <span class="curriculum">CBSE · ICSE · Maharashtra · Gujarat · MP · Goa</span>
+        <p style="margin: 0.8rem 0;">Mumbai, Pune, Ahmedabad, Nagpur, Bhopal, Indore.</p>
+        <a href="india/west-india-tuition.html" class="btn-small">West details →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL SECTION (Abroad) -->
+  <div class="container" style="margin-top: 4rem;">
+    <h2 class="section-title">🌍 Online tuition for students abroad · from $15/hr</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">We teach Mathematics & Science according to your local curriculum. Affordable rates, flexible timings.</p>
+    <div class="global-grid">
+      <!-- USA & Canada -->
+      <div class="global-card">
+        <h3>🇺🇸 USA & Canada</h3>
+        <div class="price">$18–20 / hour</div>
+        <span class="curriculum">Common Core · NGSS · IB · AP</span>
+        <p style="margin: 0.8rem 0;">Grades 6–10 Maths, Biology, Chemistry, Physics.</p>
+        <a href="global/usa-tuition.html" class="btn-small">USA details →</a>
+      </div>
+      <!-- Middle East / Gulf -->
+      <div class="global-card">
+        <h3>🇦🇪 Middle East / Gulf</h3>
+        <div class="price">$15–18 · 55–70 AED</div>
+        <span class="curriculum">IGCSE · CBSE · IB · MOE</span>
+        <p style="margin: 0.8rem 0;">Saudi, UAE, Qatar, Kuwait, Oman, Bahrain.</p>
+        <a href="global/middle-east-tuition.html" class="btn-small">Gulf details →</a>
+      </div>
+      <!-- Europe -->
+      <div class="global-card">
+        <h3>🇪🇺 Europe</h3>
+        <div class="price">€16–20 / hour</div>
+        <span class="curriculum">UK curriculum · IGCSE · IB · local</span>
+        <p style="margin: 0.8rem 0;">Maths & Science for UK, Germany, France, etc.</p>
+        <a href="global/europe-tuition.html" class="btn-small">Europe details →</a>
+      </div>
+      <!-- Australia & NZ -->
+      <div class="global-card">
+        <h3>🇦🇺 Australia & NZ</h3>
+        <div class="price">$22–25 AUD / hour</div>
+        <span class="curriculum">Australian Curriculum · NCEA</span>
+        <p style="margin: 0.8rem 0;">Years 6–10. All major cities.</p>
+        <a href="global/australia-tuition.html" class="btn-small">Australia details →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- main services list (updated with new links) -->
   <div class="container">
-    <h2 class="section-title">📌 What we offer</h2>
+    <h2 class="section-title">📌 Core services</h2>
     <div class="card-grid">
       <!-- maths tuition -->
       <div class="service-card">
         <h3>📐 Maths Tuition</h3>
-        <p>Concept-based learning for CBSE, ICSE & Odisha State Board. Algebra, Geometry, Arithmetic made easy. Experienced tutors for Class 6-10.</p>
+        <p>Concept-based learning for CBSE, ICSE, State Boards, IGCSE, IB, Common Core. Algebra, Geometry, Calculus made easy. Class 6-10.</p>
         <a href="maths-tuition.html" class="service-link">know more →</a>
       </div>
       <!-- science tuition -->
       <div class="service-card">
         <h3>🔬 Science Tuition</h3>
-        <p>Physics, Chemistry, Biology – practical approach & experiment-based learning. We build strong foundation for competitive exams.</p>
+        <p>Physics, Chemistry, Biology – practical approach, experiment-based learning. All curricula, from Odisha Board to AP/NGSS.</p>
         <a href="science-tuition.html" class="service-link">know more →</a>
       </div>
-      <!-- home tuition -->
+      <!-- home tuition (Odisha) -->
       <div class="service-card">
-        <h3>🏡 Home Tuition</h3>
-        <p>One-on-one personalised tutoring at your residence in major Odisha cities. Flexible schedule & parent-teacher updates.</p>
+        <h3>🏡 Home Tuition (Odisha)</h3>
+        <p>One-on-one personalised tutoring at your residence in Bhubaneswar, Cuttack, Rourkela, Sambalpur & more. Flexible schedule.</p>
         <a href="home-tuition-odisha.html" class="service-link">know more →</a>
       </div>
-      <!-- online classes -->
+      <!-- online pan india -->
       <div class="service-card">
-        <h3>💻 Online Classes</h3>
-        <p>Live interactive sessions with digital whiteboard, recorded videos, and regular tests. Learn from home safely.</p>
-        <a href="online-classes.html" class="service-link">know more →</a>
+        <h3>💻 Online Pan-India</h3>
+        <p>Live interactive classes for students in any Indian state. All boards covered. From ₹300/hour. Recorded sessions & tests.</p>
+        <a href="india/online-tuition.html" class="service-link">know more →</a>
+      </div>
+      <!-- online global -->
+      <div class="service-card">
+        <h3>🌎 Online Global</h3>
+        <p>Tuition for students in USA, Gulf, Europe, Australia, etc. Local curriculum experts. From $15/hour. Flexible timings.</p>
+        <a href="global/online-tuition.html" class="service-link">know more →</a>
       </div>
       <!-- small group tuition -->
       <div class="service-card">
         <h3>👥 Small Group Tuition</h3>
-        <p>Batch of 3–5 students for collaborative learning. More affordable, same individual attention. Available in select cities.</p>
-        <a href="services.html" class="service-link">know more →</a>
-      </div>
-      <!-- crash course (adds variety) -->
-      <div class="service-card">
-        <h3>⚡ Exam Crash Course</h3>
-        <p>Intensive revision for class 10 board exams. Topic-wise tests & doubt-clearing sessions. Starts January.</p>
-        <a href="services.html" class="service-link">know more →</a>
+        <p>Batch of 3–5 students for collaborative learning. More affordable, same individual attention. Available online & in Odisha cities.</p>
+        <a href="services.html#group" class="service-link">know more →</a>
       </div>
     </div>
   </div>
 
-  <!-- why choose us (quick highlight) -->
+  <!-- why choose us (updated) -->
   <div class="container">
     <h2 class="section-title">✨ Why AcademyExpress</h2>
     <div class="feature-grid">
-      <div class="feature-box"><strong>👩‍🏫 Qualified Tutors</strong> B.Ed / M.Sc from Odisha</div>
-      <div class="feature-box"><strong>📆 Flexible timings</strong> Early morning to evening</div>
+      <div class="feature-box"><strong>👩‍🏫 Qualified Tutors</strong> B.Ed / M.Sc / PhD</div>
+      <div class="feature-box"><strong>📆 Flexible timings</strong> Any timezone</div>
       <div class="feature-box"><strong>📊 Regular progress</strong> Monthly tests & reports</div>
-      <div class="feature-box"><strong>🌍 All boards</strong> CBSE, ICSE, Odisha Board</div>
+      <div class="feature-box"><strong>🌍 All boards</strong> CBSE, ICSE, State, IGCSE, IB, Common Core</div>
     </div>
   </div>
 
-  <!-- boards covered -->
+  <!-- boards covered (expanded) -->
   <div class="container">
-    <h2 class="section-title">📘 Curriculum we cover</h2>
+    <h2 class="section-title">📘 Curricula we cover</h2>
     <div class="boards-container">
       <div class="board-item"><span>📖</span><br><strong>CBSE</strong><br> Class 6-10</div>
       <div class="board-item"><span>📗</span><br><strong>ICSE</strong><br> Class 6-10</div>
-      <div class="board-item"><span>📘</span><br><strong>Odisha State Board</strong><br> BSE, CHSE</div>
+      <div class="board-item"><span>📘</span><br><strong>Odisha Board</strong><br> BSE</div>
+      <div class="board-item"><span>🌏</span><br><strong>IGCSE/IB</strong><br> International</div>
+      <div class="board-item"><span>🇺🇸</span><br><strong>Common Core</strong><br> USA</div>
+      <div class="board-item"><span>🇦🇺</span><br><strong>Australian</strong><br> Curriculum</div>
     </div>
   </div>
 
-  <!-- Odisha Map with overlay (copied from homepage) -->
+  <!-- Odisha Map with overlay (updated text) -->
   <div class="container">
-    <h2 class="section-title">📍 Serving Across Odisha</h2>
+    <h2 class="section-title">📍 From Odisha to the world</h2>
     <div class="map-wrapper">
       <div class="map-overlay">
-        <h3>Serving Across Odisha</h3>
-        <p>We provide professional services throughout Odisha — from Bhubaneswar to Rourkela, Cuttack to Puri</p>
-        <div class="highlight-cities">📚 Maths & Science tuition for Class 6-10</div>
+        <h3>Headquartered in Odisha, serving globally</h3>
+        <p>Home tuition in Bhubaneswar, Cuttack, Rourkela … plus online for every Indian state and 20+ countries.</p>
+        <div class="highlight-cities">📚 Maths & Science tuition for Class 6-10, any curriculum</div>
       </div>
       <div class="mapouter">
         <div class="gmap_canvas">
@@ -616,19 +794,19 @@
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank" rel="noopener noreferrer" class="gme-generated-link">Embed Map on Website for Free</a>
+        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank" rel="noopener noreferrer" class="gme-generated-link">Embed Map</a>
       </div>
     </div>
   </div>
 
-  <!-- CTA banner with required buttons -->
+  <!-- CTA banner with updated buttons -->
   <div class="container">
     <div class="cta-banner">
       <h2>Ready to start your learning journey?</h2>
-      <p>Get a free demo class or talk to an academic counsellor.</p>
+      <p>Get a free demo class or talk to an academic counsellor. Any curriculum, any location.</p>
       <div class="btn-group">
-        <a href="contact.html#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Tutor</a>
-        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Odisha%20-%20class%20%5Bclass%5D,%20subject%20%5Bsubject%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
+        <a href="#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Tutor</a>
+        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20subject%20%5Bsubject%5D,%20location%20%5Bstate/country%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -639,34 +817,53 @@
     </div>
   </div>
 
-  <!-- quick enquiry mini form -->
-  <div class="container">
-    <h2 class="section-title">📝 Quick enquiry</h2>
-    <div class="quick-enquiry-card">
-      <form id="quickEnquiry" onsubmit="sendQuickEnquiry(event)">
-        <div class="quick-enquiry-grid">
-          <input type="text" placeholder="Your Name" id="qname" required>
-          <input type="text" placeholder="Class (e.g. 10)" id="qclass" required>
-          <input type="text" placeholder="City" id="qcity" required>
-          <input type="tel" placeholder="Phone Number" id="qphone" required>
+  <!-- FIXED ENQUIRY FORM - Professional, matches other pages -->
+  <div class="container" id="enquiry-form">
+    <h2 class="section-title">📝 Enquire for tuition (India / abroad)</h2>
+    <div class="enquiry-card">
+      <form id="servicesEnquiry" onsubmit="sendServicesEnquiry(event)">
+        <div class="enquiry-grid">
+          <input type="text" placeholder="Student Name" id="sname" required>
+          <input type="text" placeholder="Class (e.g. 10)" id="sclass" required>
+          <input type="text" placeholder="State / Country / City" id="slocation" required>
+          <input type="tel" placeholder="Phone / WhatsApp Number" id="sphone" required>
+          <select id="scurriculum" class="full-width" required>
+            <option value="">Select curriculum</option>
+            <option>CBSE (India)</option>
+            <option>ICSE (India)</option>
+            <option>State Board (Odisha)</option>
+            <option>State Board (other India)</option>
+            <option>IGCSE (UK/International)</option>
+            <option>IB (International)</option>
+            <option>Common Core (USA)</option>
+            <option>AP (USA)</option>
+            <option>MOE (Gulf)</option>
+            <option>Australian Curriculum</option>
+            <option>Other / not sure</option>
+          </select>
+          <select id="smode" class="full-width" required>
+            <option value="">Select mode</option>
+            <option>Online (anywhere)</option>
+            <option>Home Tuition (Odisha only)</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn-wa" style="width:100%; margin-top:1rem; justify-content: center;">
+        <button type="submit" class="btn btn-wa enquiry-submit">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
-          Send on WhatsApp
+          Send enquiry on WhatsApp
         </button>
       </form>
     </div>
   </div>
 
-  <!-- footer -->
+  <!-- footer (updated with global & india links) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10 across Odisha</p>
+          <p>Maths & Science tuition<br>Class 6–10: Odisha, all India & worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
           <a href="https://wa.me/919937641801">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -677,21 +874,27 @@
         </p>
         </div>
         <div>
-          <h4>City quick links</h4>
+          <h4>Odisha home cities</h4>
           <div class="footer-cities">
             <a href="cities/bhubaneswar-home-tuition.html">Bhubaneswar</a>
             <a href="cities/cuttack-home-tuition.html">Cuttack</a>
             <a href="cities/rourkela-home-tuition.html">Rourkela</a>
             <a href="cities/sambalpur-home-tuition.html">Sambalpur</a>
-            <a href="cities/angul-home-tuition.html">Angul</a>
-            <a href="cities/balasore-home-tuition.html">Balasore</a>
-            <a href="cities/jajpur-home-tuition.html">Jajpur</a>
-            <a href="cities/berhampur-home-tuition.html">Berhampur</a>
           </div>
         </div>
         <div>
-          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
-          <a href="tutor-join.html">Join as Tutor</a> | <a href="blog.html">Blog</a>
+          <h4>Pan India online</h4>
+          <a href="india/north-india-tuition.html">North India</a> | <a href="india/south-india-tuition.html">South India</a><br>
+          <a href="india/east-india-tuition.html">East & NE</a> | <a href="india/west-india-tuition.html">West & Central</a>
+        </div>
+        <div>
+          <h4>Global tuition</h4>
+          <a href="global/usa-tuition.html">USA & Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
+          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia</a><br>
+          <div style="margin-top: 0.8rem;">
+            <a href="about.html">About</a> | <a href="/blog/">Blog</a> | <a href="contact.html">Contact</a><br>
+            <a href="tutor-join.html">Join as Tutor</a>
+          </div>
         </div>
       </div>
       <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
@@ -706,15 +909,18 @@
       nav.classList.toggle('show');
     });
 
-    // quick enquiry form: whatsapp prefill
-    function sendQuickEnquiry(e) {
+    // services enquiry form: whatsapp prefill (fixed)
+    function sendServicesEnquiry(e) {
       e.preventDefault();
-      const name = document.getElementById('qname').value.trim();
-      const cls = document.getElementById('qclass').value.trim();
-      const city = document.getElementById('qcity').value.trim();
-      const phone = document.getElementById('qphone').value.trim();
-      const msg = `*Quick enquiry from services page*%0AName: ${name}%0AClass: ${cls}%0ACity: ${city}%0APhone: ${phone}`;
-      window.open(`https://wa.me/919937641801?text=${msg}`, '_blank');
+      const name = document.getElementById('sname').value.trim();
+      const cls = document.getElementById('sclass').value.trim();
+      const location = document.getElementById('slocation').value.trim();
+      const phone = document.getElementById('sphone').value.trim();
+      const curriculum = document.getElementById('scurriculum').value;
+      const mode = document.getElementById('smode').value;
+      
+      const message = `*Tuition enquiry from Services page*%0AStudent: ${name}%0AClass: ${cls}%0ACurriculum: ${curriculum}%0ALocation: ${location}%0APhone: ${phone}%0AMode: ${mode}`;
+      window.open(`https://wa.me/919937641801?text=${message}`, '_blank');
     }
 
     // close hamburger menu when a link is clicked
