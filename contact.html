@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | AcademyExpress – Maths Science Tutoring Odisha</title>
-  <meta name="description" content="Get in touch with AcademyExpress for Maths & Science tuition in Odisha. Call, WhatsApp, or fill the enquiry form. Home tuition & online classes.">
-  <!-- EXACT same style as homepage - copied directly from index.html -->
+  <title>Contact Us | AcademyExpress – Maths & Science Tuition: Odisha, India & Global</title>
+  <meta name="description" content="Get in touch with AcademyExpress for Maths & Science tuition in Odisha, across India, or globally. Call, WhatsApp, or fill the enquiry form. Home tuition & online classes for all curricula.">
+  <meta name="keywords" content="contact AcademyExpress, tuition enquiry, maths tutor contact, science tutor WhatsApp, online tuition help, global tuition support">
+  <meta name="author" content="AcademyExpress">
+  <link rel="canonical" href="https://www.academyexpress.in/contact.html">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Contact AcademyExpress – Maths & Science Tuition: Odisha, India & Global">
+  <meta property="og:description" content="Get in touch with AcademyExpress for Maths & Science tuition. Call, WhatsApp, or fill the enquiry form.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0f3b5e/white?text=Contact+AcademyExpress">
+  <meta property="og:url" content="https://www.academyexpress.in/contact.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     * {
       margin: 0;
@@ -172,7 +181,7 @@
       height: 16px;
       margin-right: 2px;
     }
-    /* hero - reused for page header to match homepage style */
+    /* hero - reused for page header */
     .hero {
       background: linear-gradient(145deg, #e6f0fa 0%, #ffffff 80%);
       padding: 3rem 0;
@@ -194,76 +203,59 @@
       color: #334155;
       margin-bottom: 2rem;
     }
-    /* cards - reused */
+    /* section title */
     .section-title {
       font-size: 2.2rem;
       color: #0f3b5e;
       margin-bottom: 2rem;
       font-weight: 600;
     }
-    .card-grid {
+    /* Contact page specific */
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 3rem 0;
     }
-    .card {
+    .contact-info-card {
       background: white;
-      padding: 1.8rem 1.2rem;
-      border-radius: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      text-align: center;
+      border-radius: 32px;
+      padding: 2rem;
       border: 1px solid #e2e8f0;
-      transition: all 0.2s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
     }
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #f59e0b;
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #0f3b5e;
-    }
-    .city-links {
+    .info-item {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .info-icon {
+      background: #0f3b5e;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 0.6rem 1.2rem;
-      margin-top: 1rem;
+      font-size: 1.5rem;
+      flex-shrink: 0;
     }
-    .city-links a {
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px dotted #94a3b8;
-    }
-    .city-links a:hover {
-      color: #f59e0b;
-    }
-    .steps {
+    .double-input {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 2rem;
-      text-align: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
-    .step {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 2rem;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
-    }
-    .step h3 {
-      font-size: 1.8rem;
-      color: #f59e0b;
-    }
-    /* forms - exactly like homepage with proper gaps */
     .form-card {
       background: white;
       border-radius: 32px;
       padding: 2rem;
       border: 1px solid #e2e8f0;
-      max-width: 700px;
-      margin: 1rem auto;
+      max-width: 100%;
+      margin: 0 auto 2rem;
     }
     .form-row {
       margin-bottom: 1.2rem;
@@ -278,6 +270,28 @@
     }
     input:focus, select:focus {
       outline: 2px solid #f59e0b;
+    }
+    .global-badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #0f3b5e;
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      margin: 0.5rem 0.3rem;
+      font-size: 0.9rem;
+    }
+    .cta-banner {
+      background: #0f3b5e;
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 48px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-banner .btn-group {
+      justify-content: center;
+      margin-top: 2rem;
     }
     .footer {
       background: #0f3b5e;
@@ -361,12 +375,8 @@
       }
       .hero-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem; }
-      .steps { grid-template-columns: 1fr; }
       .btn-group { flex-direction: column; width: 100%; }
       .btn { text-align: center; }
-      .map-overlay {
-        max-width: 100%;
-      }
       .logo-icon {
         width: 40px;
         height: 40px;
@@ -378,7 +388,6 @@
       .logo-express {
         font-size: 1.5rem;
       }
-      /* contact page specific responsive */
       .contact-grid {
         grid-template-columns: 1fr !important;
       }
@@ -387,70 +396,10 @@
         gap: 1rem !important;
       }
     }
-    /* Contact page specific additions (keeping homepage style) */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      margin: 3rem 0;
-    }
-    .contact-info-card {
-      background: white;
-      border-radius: 32px;
-      padding: 2rem;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-    }
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    .info-icon {
-      background: #0f3b5e;
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .double-input {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .cta-banner {
-      background: #0f3b5e;
-      color: white;
-      padding: 3rem 2rem;
-      border-radius: 48px;
-      text-align: center;
-      margin: 3rem 0;
-    }
-    .cta-banner .btn-group {
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    /* Maintain proper gaps in forms */
-    .form-card form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .form-card .btn-wa {
-      margin-top: 0.5rem;
-    }
   </style>
 </head>
 <body>
-  <!-- floating whatsapp button - exactly like homepage -->
+  <!-- floating whatsapp button -->
   <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question%20from%20the%20Contact%20page." 
      class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
     <span class="wa-icon">
@@ -460,7 +409,7 @@
     </span>
   </a>
 
-  <!-- header with new logo - exactly like homepage -->
+  <!-- header with logo -->
   <header>
     <div class="container header-flex">
       <a href="index.html" class="logo">
@@ -475,7 +424,6 @@
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
-        <!-- blog link points to /blog/ -->
         <a href="/blog/">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -491,15 +439,15 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER using hero class to match homepage exactly -->
+  <!-- PAGE HEADER with updated global messaging -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <h1>Contact AcademyExpress</h1>
-        <p>We're here to help – reach out for any queries about Maths & Science tuition</p>
+        <p>We're here to help – whether you're in Odisha, across India, or anywhere in the world. Reach out for Maths & Science tuition.</p>
         <div class="btn-group">
           <a href="#enquiry-form" class="btn btn-outline">📋 Request Tutor</a>
-          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Odisha%20-%20class%20%5Bclass%5D,%20subject%20%5Bsubject%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
+          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20curriculum%20%5Bcurriculum%5D,%20location%20%5Bcity/country%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -509,15 +457,25 @@
         </div>
       </div>
       <div>
-        <img src="https://placehold.co/600x400/0f3b5e/white?text=Contact+Us" alt="Contact AcademyExpress" style="max-width:100%; border-radius: 40px;">
+        <img src="https://placehold.co/600x400/0f3b5e/white?text=Contact+AcademyExpress" alt="Contact AcademyExpress" style="max-width:100%; border-radius: 40px;">
       </div>
     </div>
   </section>
 
+  <!-- Global presence badges -->
+  <div class="container" style="text-align: center; margin-top: -1rem;">
+    <span class="global-badge">🏡 Home Tuition: Odisha</span>
+    <span class="global-badge">🇮🇳 Online Pan-India</span>
+    <span class="global-badge">🇺🇸 USA & Canada</span>
+    <span class="global-badge">🇦🇪 Middle East / Gulf</span>
+    <span class="global-badge">🇪🇺 Europe</span>
+    <span class="global-badge">🇦🇺 Australia & NZ</span>
+  </div>
+
   <!-- MAIN CONTACT AREA: INFO + FORMS -->
   <div class="container">
     <div class="contact-grid">
-      <!-- LEFT: CONTACT INFO & QUICK ACTIONS -->
+      <!-- LEFT: CONTACT INFO & QUICK ACTIONS (updated with global hours) -->
       <div>
         <div class="contact-info-card">
           <h2 style="color: #0f3b5e; margin-bottom: 2rem; font-size: 1.8rem;">📬 Get in touch</h2>
@@ -542,9 +500,10 @@
           <div class="info-item">
             <div class="info-icon">⏰</div>
             <div>
-              <strong>Hours</strong><br>
+              <strong>Hours (IST)</strong><br>
               Mon-Sat: 9am – 8pm<br>
-              Sunday: 10am – 4pm
+              Sunday: 10am – 4pm<br>
+              <small style="color:#64748b;">Global: Flexible timings for all timezones</small>
             </div>
           </div>
 
@@ -557,7 +516,7 @@
             </div>
           </div>
 
-          <!-- quick buttons inside info card with WhatsApp logo -->
+          <!-- quick buttons inside info card -->
           <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
             <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank" style="flex:1; justify-content: center;">
               <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -570,9 +529,9 @@
         </div>
       </div>
 
-      <!-- RIGHT: TWO FORMS with proper gaps and WhatsApp logos -->
+      <!-- RIGHT: TWO FORMS (updated with global curriculum options) -->
       <div>
-        <!-- STUDENT ENQUIRY FORM (with id="enquiry-form" for anchor link) -->
+        <!-- STUDENT ENQUIRY FORM (updated with curriculum & location) -->
         <div class="form-card" id="enquiry-form">
           <h2 style="color: #0f3b5e; margin-bottom: 1.5rem; font-size: 1.8rem;">📝 Student Enquiry</h2>
           <form id="studentContactEnquiry" onsubmit="sendStudentEnquiry(event)">
@@ -580,7 +539,7 @@
               <input type="text" placeholder="Student Name" id="sname" required>
             </div>
             <div class="double-input">
-              <input type="text" placeholder="Class" id="sclass" required>
+              <input type="text" placeholder="Class / Grade" id="sclass" required>
               <select id="ssubject">
                 <option>Mathematics</option>
                 <option>Science</option>
@@ -588,14 +547,31 @@
               </select>
             </div>
             <div class="double-input">
-              <input type="text" placeholder="City" id="scity" required>
-              <input type="text" placeholder="Area / Locality" id="sarea" required>
+              <input type="text" placeholder="Country / City" id="scountry" required>
+              <input type="text" placeholder="Area / Locality (optional)" id="sarea">
             </div>
             <div class="double-input">
-              <input type="tel" placeholder="Phone Number" id="sphone" required>
-              <select id="smode">
-                <option>Home Tuition</option>
-                <option>Online Classes</option>
+              <input type="tel" placeholder="Phone / WhatsApp Number" id="sphone" required>
+              <select id="scurriculum" required>
+                <option value="">Select Curriculum</option>
+                <option>CBSE (India)</option>
+                <option>ICSE (India)</option>
+                <option>State Board (India)</option>
+                <option>IGCSE (International)</option>
+                <option>IB (International)</option>
+                <option>Common Core (USA)</option>
+                <option>AP (USA)</option>
+                <option>MOE (Gulf)</option>
+                <option>UK Curriculum</option>
+                <option>Australian Curriculum</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <select id="smode" required>
+                <option value="">Select Mode</option>
+                <option>Home Tuition (Odisha only)</option>
+                <option>Online (anywhere)</option>
               </select>
             </div>
             <button type="submit" class="btn btn-wa" style="width:100%; justify-content: center;">
@@ -607,7 +583,7 @@
           </form>
         </div>
 
-        <!-- TUTOR QUICK JOIN FORM with WhatsApp logo on button -->
+        <!-- TUTOR QUICK JOIN FORM (updated with global experience) -->
         <div class="form-card">
           <h2 style="color: #0f3b5e; margin-bottom: 1.5rem; font-size: 1.8rem;">👩‍🏫 Quick Tutor Registration</h2>
           <form id="tutorQuickJoin" onsubmit="sendTutorEnquiry(event)">
@@ -617,11 +593,23 @@
             </div>
             <div class="double-input">
               <input type="text" placeholder="Subjects (e.g., Maths, Science)" id="tsubjects" required>
-              <input type="text" placeholder="City" id="tcity" required>
+              <input type="text" placeholder="City / Country" id="tcity" required>
             </div>
             <div class="double-input">
               <input type="number" placeholder="Experience (years)" id="texp" required>
-              <input type="tel" placeholder="Phone Number" id="tphone" required>
+              <input type="tel" placeholder="Phone / WhatsApp Number" id="tphone" required>
+            </div>
+            <div class="form-row">
+              <select id="tcurriculum" required>
+                <option value="">Curricula you can teach</option>
+                <option>CBSE</option>
+                <option>ICSE</option>
+                <option>State Boards (India)</option>
+                <option>IGCSE</option>
+                <option>IB</option>
+                <option>Common Core / AP</option>
+                <option>Multiple / All</option>
+              </select>
             </div>
             <p style="font-size:0.9rem; margin:0.5rem 0 1rem 0; color:#64748b;">*Full registration on next page</p>
             <button type="submit" class="btn btn-wa" style="width:100%; justify-content: center;">
@@ -639,10 +627,11 @@
     </div>
   </div>
 
-  <!-- CTA BANNER with WhatsApp logo -->
+  <!-- CTA BANNER with global message -->
   <div class="container">
     <div class="cta-banner">
       <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Still have questions? We're just a message away.</h2>
+      <p style="font-size:1.2rem; margin-bottom:1rem;">No matter where you are in the world, we're here to help.</p>
       <div class="btn-group">
         <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -656,30 +645,35 @@
     </div>
   </div>
 
-  <!-- CITY EXPLORER -->
+  <!-- EXPLORE OUR SERVICES (expanded with global & India links) -->
   <div class="container" style="text-align: center; margin: 2rem auto;">
-    <h2 class="section-title">📍 Find us in your city</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 2rem;">
+    <h2 class="section-title">📍 Explore our tuition services</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 1rem;">
       <a href="cities/bhubaneswar-home-tuition.html" class="btn btn-outline">Bhubaneswar</a>
       <a href="cities/cuttack-home-tuition.html" class="btn btn-outline">Cuttack</a>
       <a href="cities/rourkela-home-tuition.html" class="btn btn-outline">Rourkela</a>
       <a href="cities/sambalpur-home-tuition.html" class="btn btn-outline">Sambalpur</a>
       <a href="cities/balasore-home-tuition.html" class="btn btn-outline">Balasore</a>
-      <a href="cities/angul-home-tuition.html" class="btn btn-outline">Angul</a>
-      <a href="cities/jajpur-home-tuition.html" class="btn btn-outline">Jajpur</a>
-      <a href="cities/berhampur-home-tuition.html" class="btn btn-outline">Berhampur</a>
-      <a href="cities/puri-home-tuition.html" class="btn btn-outline">Puri</a>
-      <a href="cities/jharsuguda-home-tuition.html" class="btn btn-outline">Jharsuguda</a>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 2rem;">
+      <a href="india/north-india-online-tuition.html" class="btn btn-outline">North India</a>
+      <a href="india/south-india-online-tuition.html" class="btn btn-outline">South India</a>
+      <a href="india/east-india-online-tuition.html" class="btn btn-outline">East India</a>
+      <a href="india/west-india-online-tuition.html" class="btn btn-outline">West India</a>
+      <a href="global/usa-tuition.html" class="btn btn-outline">USA & Canada</a>
+      <a href="global/middle-east-tuition.html" class="btn btn-outline">Middle East</a>
+      <a href="global/europe-tuition.html" class="btn btn-outline">Europe</a>
+      <a href="global/australia-tuition.html" class="btn btn-outline">Australia & NZ</a>
     </div>
   </div>
 
-  <!-- FOOTER - exactly like homepage -->
+  <!-- FOOTER - updated with global & India links -->
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10 across Odisha</p>
+          <p>Maths & Science tuition<br>Class 6–10: Odisha, India & Worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
           <a href="https://wa.me/919937641801">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -690,7 +684,7 @@
         </p>
         </div>
         <div>
-          <h4>City quick links</h4>
+          <h4>Odisha home cities</h4>
           <div class="footer-cities">
             <a href="cities/bhubaneswar-home-tuition.html">Bhubaneswar</a>
             <a href="cities/cuttack-home-tuition.html">Cuttack</a>
@@ -699,20 +693,29 @@
             <a href="cities/angul-home-tuition.html">Angul</a>
             <a href="cities/balasore-home-tuition.html">Balasore</a>
             <a href="cities/jajpur-home-tuition.html">Jajpur</a>
-            <a href="cities/berhampur-home-tuition.html">Berhampur</a>
           </div>
         </div>
         <div>
-          <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a><br>
-          <a href="tutor-join.html">Join as Tutor</a> | <a href="/blog/">Blog</a>
+          <h4>Pan India online</h4>
+          <a href="india/north-india-online-tuition.html">North India</a> | <a href="india/south-india-online-tuition.html">South India</a><br>
+          <a href="india/east-india-online-tuition.html">East & NE</a> | <a href="india/west-india-online-tuition.html">West & Central</a>
+        </div>
+        <div>
+          <h4>Global tuition</h4>
+          <a href="global/usa-tuition.html">USA & Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
+          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia & NZ</a><br>
+          <div style="margin-top: 0.8rem;">
+            <a href="about.html">About</a> | <a href="/blog/">Blog</a> | <a href="contact.html">Contact</a><br>
+            <a href="tutor-join.html">Join as Tutor</a>
+          </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. Maths & Science tuition for Class 6-10, anywhere.</p>
     </div>
   </footer>
 
   <script>
-    // hamburger toggle - exactly like homepage
+    // hamburger toggle
     const toggleBtn = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
     toggleBtn.addEventListener('click', function() {
@@ -728,21 +731,22 @@
       });
     });
 
-    // student enquiry
+    // student enquiry (updated with curriculum & country)
     function sendStudentEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('sname').value.trim();
       const cls = document.getElementById('sclass').value.trim();
       const subject = document.getElementById('ssubject').value;
-      const city = document.getElementById('scity').value.trim();
+      const country = document.getElementById('scountry').value.trim();
       const area = document.getElementById('sarea').value.trim();
       const phone = document.getElementById('sphone').value.trim();
+      const curriculum = document.getElementById('scurriculum').value;
       const mode = document.getElementById('smode').value;
-      const msg = `*Student enquiry from contact page*%0AName: ${name}%0AClass: ${cls}%0ASubject: ${subject}%0ACity: ${city}%0AArea: ${area}%0APhone: ${phone}%0AMode: ${mode}`;
+      const msg = `*Student enquiry from contact page*%0AName: ${name}%0AClass/Grade: ${cls}%0ASubject: ${subject}%0ACurriculum: ${curriculum}%0ACountry/City: ${country}%0AArea: ${area || 'N/A'}%0APhone: ${phone}%0AMode: ${mode}`;
       window.open(`https://wa.me/919937641801?text=${msg}`, '_blank');
     }
 
-    // quick tutor join
+    // quick tutor join (updated with curriculum)
     function sendTutorEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('tname').value.trim();
@@ -751,11 +755,12 @@
       const city = document.getElementById('tcity').value.trim();
       const exp = document.getElementById('texp').value.trim();
       const phone = document.getElementById('tphone').value.trim();
-      const msg = `*Quick tutor registration (contact page)*%0AName: ${name}%0AQualification: ${qual}%0ASubjects: ${subjects}%0ACity: ${city}%0AExperience: ${exp} years%0APhone: ${phone}`;
+      const curriculum = document.getElementById('tcurriculum').value;
+      const msg = `*Quick tutor registration (contact page)*%0AName: ${name}%0AQualification: ${qual}%0ASubjects: ${subjects}%0ACurricula: ${curriculum}%0ACity/Country: ${city}%0AExperience: ${exp} years%0APhone: ${phone}`;
       window.open(`https://wa.me/919937641801?text=${msg}`, '_blank');
       // optional redirect
       setTimeout(() => { window.location.href = 'tutor-join.html'; }, 1500);
     }
   </script>
 </body>
-          </html>
+</html>
