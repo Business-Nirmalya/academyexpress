@@ -1,5 +1,5 @@
 # robots.txt for AcademyExpress.in
-# This file instructs search engine crawlers on which pages to crawl and index
+# This file instructs search engine crawlers and AI models on which pages to crawl and index
 
 User-agent: *
 # Allow all major search engines to crawl the entire site
@@ -45,11 +45,95 @@ Allow: /blog/
 # (Recommended for large sites with many pages)
 Crawl-delay: 1
 
-# Additional directives for specific bots (optional)
+# ============================================
+# AI MODEL ALLOWANCE - For AI assistants like ChatGPT, Claude, Gemini, etc.
+# These AI crawlers help improve search and discovery through AI platforms
+# ============================================
+
+# Allow OpenAI's GPTBot (powers ChatGPT)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+# Allow OpenAI's ChatGPT-User agent
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+# Allow Anthropic's Claude AI crawler
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# Allow Google's Gemini / Bard crawler
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Allow Common Crawl (used by many AI models for training)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+# Allow Perplexity AI crawler
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Allow Amazon's Alexa crawler (used for AI and search)
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 1
+
+# Allow Facebook's crawler (used for Meta AI)
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+# Allow LinkedIn crawler
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Allow Twitter/X crawler
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+# Allow Apple's crawler (used for Siri and Apple AI)
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Allow DuckDuckGo crawler
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# ============================================
+# SEARCH ENGINE BOTS - Optimized for major search engines
+# ============================================
 
 # Googlebot - faster crawling allowed
 User-agent: Googlebot
 Crawl-delay: 0.5
+Allow: /
+
+# Googlebot for images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/images/
+
+# Googlebot for news
+User-agent: Googlebot-News
+Allow: /blog/
+Allow: /index.html
+Allow: /services.html
+Allow: /maths-tuition.html
+Allow: /science-tuition.html
+
+# Googlebot for video (if any video content)
+User-agent: Googlebot-Video
 Allow: /
 
 # Bingbot
@@ -72,34 +156,27 @@ User-agent: Baiduspider
 Crawl-delay: 2
 Allow: /
 
-# Disallow AI scrapers and bots that may misuse content (optional)
-# Uncomment if you want to block AI training bots
-# User-agent: GPTBot
+# ============================================
+# DISALLOWED BOTS - Malicious or aggressive crawlers
+# ============================================
+
+# Disallow known malicious bots (optional - uncomment if needed)
+# User-agent: AhrefsBot
 # Disallow: /
 # 
-# User-agent: ChatGPT-User
+# User-agent: SemrushBot
 # Disallow: /
 # 
-# User-agent: CCBot
+# User-agent: MJ12bot
 # Disallow: /
 # 
-# User-agent: anthropic-ai
+# User-agent: DotBot
 # Disallow: /
-
-# Additional Google-specific directives
-User-agent: Googlebot-Image
-Allow: /images/
-Allow: /assets/images/
-
-User-agent: Googlebot-News
-Allow: /blog/
-Allow: /index.html
-Allow: /services.html
-Allow: /maths-tuition.html
-Allow: /science-tuition.html
-
-# Allow all important pages for Googlebot-Video (if any video content)
-User-agent: Googlebot-Video
-Allow: /
+# 
+# User-agent: rogerbot
+# Disallow: /
+# 
+# User-agent: BLEXBot
+# Disallow: /
 
 # End of robots.txt file
