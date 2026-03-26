@@ -1,4 +1,105 @@
+# robots.txt for AcademyExpress.in
+# This file instructs search engine crawlers on which pages to crawl and index
+
 User-agent: *
+# Allow all major search engines to crawl the entire site
 Allow: /
 
+# Sitemap location - helps search engines discover all your pages
 Sitemap: https://academyexpress.in/sitemap.xml
+
+# Disallow access to sensitive directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /includes/
+Disallow: /config/
+
+# Disallow access to private/user data directories (if any)
+Disallow: /private/
+Disallow: /user-data/
+
+# Disallow common script and asset directories (not needed for indexing)
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /assets/
+
+# Disallow any potential duplicate content areas
+Disallow: /*?*
+Disallow: /index.php
+Disallow: /*.pdf$
+
+# Allow crawlers to access all city and service pages
+Allow: /cities/
+Allow: /india/
+Allow: /global/
+Allow: /blog/
+
+# Specify crawl delay to be considerate to the server
+# (Recommended for large sites with many pages)
+Crawl-delay: 1
+
+# Additional directives for specific bots (optional)
+
+# Googlebot - faster crawling allowed
+User-agent: Googlebot
+Crawl-delay: 0.5
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Crawl-delay: 1
+Allow: /
+
+# Yahoo! Slurp
+User-agent: Slurp
+Crawl-delay: 1
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Crawl-delay: 1
+Allow: /
+
+# Baidu Spider (slower crawl due to high request rate)
+User-agent: Baiduspider
+Crawl-delay: 2
+Allow: /
+
+# Disallow AI scrapers and bots that may misuse content (optional)
+# Uncomment if you want to block AI training bots
+# User-agent: GPTBot
+# Disallow: /
+# 
+# User-agent: ChatGPT-User
+# Disallow: /
+# 
+# User-agent: CCBot
+# Disallow: /
+# 
+# User-agent: anthropic-ai
+# Disallow: /
+
+# Additional Google-specific directives
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/images/
+
+User-agent: Googlebot-News
+Allow: /blog/
+Allow: /index.html
+Allow: /services.html
+Allow: /maths-tuition.html
+Allow: /science-tuition.html
+
+# Allow all important pages for Googlebot-Video (if any video content)
+User-agent: Googlebot-Video
+Allow: /
+
+# End of robots.txt file
