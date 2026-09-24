@@ -12,10 +12,12 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
     }
+    html { scroll-behavior: smooth; }
     body {
       background: #f8fafc;
       color: #1e293b;
       line-height: 1.5;
+      overflow-x: hidden;
     }
     .container {
       max-width: 1280px;
@@ -28,7 +30,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
     .header-flex {
       display: flex;
@@ -59,6 +61,7 @@
       font-size: 1.8rem;
       transform: rotate(-5deg);
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
     }
     .logo-text {
       display: flex;
@@ -109,6 +112,10 @@
     .nav-links a:hover {
       color: #f59e0b;
     }
+    .nav-links a.nav-highlight {
+      color: #f59e0b;
+      font-weight: 600;
+    }
     .btn {
       display: inline-block;
       background: #0f3b5e;
@@ -146,6 +153,17 @@
       background: #0f3b5e;
       color: white;
     }
+    .btn-assess {
+      background: #f59e0b;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-assess:hover {
+      background: #d97706;
+    }
     .btn-group {
       display: flex;
       gap: 0.8rem;
@@ -157,6 +175,7 @@
       fill: white;
       display: inline-block;
       vertical-align: middle;
+      flex-shrink: 0;
     }
     .btn-wa .wa-logo {
       width: 20px;
@@ -193,8 +212,15 @@
     .section-title {
       font-size: 2.2rem;
       color: #0f3b5e;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
+      line-height: 1.25;
+    }
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: #334155;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
     }
     .card-grid {
       display: grid;
@@ -246,16 +272,22 @@
       padding: 2rem 1rem;
       border-radius: 2rem;
       box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      border: 1px solid #e2e8f0;
     }
-    .step h3 {
+    .step .step-emoji {
       font-size: 1.8rem;
       color: #f59e0b;
+      display: block;
+      margin-bottom: 0.4rem;
     }
-    .map-section {
-      margin-top: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .step h3 {
+      font-size: 1.3rem;
+      color: #0f3b5e;
+      margin-bottom: 0.4rem;
+    }
+    .step p {
+      color: #475569;
+      font-size: 0.98rem;
     }
     .mapouter {
       position: relative;
@@ -277,6 +309,7 @@
       width: 100%;
       height: 100%;
       border: 0;
+      display: block;
     }
     .map-wrapper {
       position: relative;
@@ -298,11 +331,18 @@
       text-align: center;
     }
     .map-overlay h3 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #0f3b5e;
       margin-bottom: 0.5rem;
       line-height: 1.2;
+    }
+    .map-overlay p { color: #475569; }
+    .highlight-cities {
+      margin-top: 0.6rem;
+      color: #0f3b5e;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
     /* global cards + india wide */
     .global-grid {
@@ -310,6 +350,9 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
       margin: 2rem 0;
+    }
+    .global-grid.cols-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
     .global-card {
       background: white;
@@ -319,33 +362,41 @@
       border: 1px solid #e2e8f0;
       transition: 0.2s;
       box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
     }
     .global-card:hover {
       transform: scale(1.02);
       border-color: #f59e0b;
     }
     .global-card h3 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 0.75rem;
       color: #0f3b5e;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      line-height: 1.2;
     }
     .global-card .price {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: #f59e0b;
       margin: 0.5rem 0 0.25rem;
     }
     .global-card .curriculum {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #334155;
       background: #f1f5f9;
       padding: 0.4rem 1rem;
       border-radius: 60px;
       display: inline-block;
       margin: 1rem 0 0.5rem;
+      align-self: flex-start;
+    }
+    .global-card p {
+      color: #475569;
+      flex-grow: 1;
     }
     .global-card .btn-small {
       margin-top: 1.2rem;
@@ -358,10 +409,29 @@
       display: inline-block;
       text-decoration: none;
       transition: 0.2s;
+      align-self: flex-start;
     }
     .global-card .btn-small:hover {
       background: #0f3b5e;
       color: white;
+    }
+    /* sub-links inside cards */
+    .sub-links {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+      font-size: 0.92rem;
+    }
+    .sub-links a {
+      color: #0284c7;
+      text-decoration: none;
+      border-bottom: 1px dotted #94a3b8;
+      padding-bottom: 1px;
+    }
+    .sub-links a:hover {
+      color: #f59e0b;
+      border-bottom-color: #f59e0b;
     }
     .form-card {
       background: white;
@@ -370,10 +440,9 @@
       border: 1px solid #e2e8f0;
       max-width: 700px;
       margin: 1rem auto;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
     }
-    .form-row {
-      margin-bottom: 1.2rem;
-    }
+    .form-row { margin-bottom: 1.2rem; }
     input, select, textarea {
       width: 100%;
       padding: 0.9rem 1.2rem;
@@ -381,10 +450,153 @@
       border: 1px solid #cbd5e1;
       font-size: 1rem;
       background: #f9f9fc;
+      font-family: inherit;
     }
     input:focus, select:focus {
       outline: 2px solid #f59e0b;
+      background: #ffffff;
     }
+
+    /* ===== FREE ASSESSMENT SECTION ===== */
+    .assessment-section {
+      background: linear-gradient(135deg, #0f3b5e 0%, #1e5a8a 100%);
+      color: white;
+      padding: 3.5rem 2rem;
+      border-radius: 40px;
+      margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .assessment-section::before {
+      content: "🎯";
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-size: 12rem;
+      opacity: 0.06;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    .assessment-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .assessment-section h2 {
+      font-size: 2.4rem;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .assessment-section p {
+      font-size: 1.15rem;
+      color: #dbeafe;
+      margin-bottom: 1.5rem;
+    }
+    .assessment-features {
+      list-style: none;
+      margin: 1.5rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 1.5rem;
+    }
+    .assessment-features li {
+      color: #e0f2fe;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .assessment-features li::before {
+      content: "✓";
+      color: #f59e0b;
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .assessment-cta {
+      background: #f59e0b;
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+      transition: 0.2s;
+    }
+    .assessment-cta:hover {
+      background: #d97706;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5);
+    }
+    .assessment-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .assessment-visual {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 32px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+    .assessment-visual h3 {
+      color: #fbbf24;
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .assessment-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .assessment-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.9rem 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      border-left: 3px solid #f59e0b;
+    }
+    .assessment-step .num {
+      background: #f59e0b;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .assessment-step .step-text {
+      color: #e0f2fe;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .assessment-step .step-text strong {
+      color: white;
+      display: block;
+      margin-bottom: 2px;
+    }
+
     .footer {
       background: #0f3b5e;
       color: white;
@@ -404,15 +616,18 @@
       gap: 2rem;
       justify-content: space-between;
     }
+    .footer-links > div {
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
+    .footer h4 { margin-bottom: 0.6rem; }
     .footer-cities {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       margin: 1rem 0;
     }
-    .footer-cities a {
-      color: #b9d9f5;
-    }
+    .footer-cities a { color: #b9d9f5; }
     .sitemap-link {
       margin-top: 1rem;
       font-size: 0.9rem;
@@ -438,7 +653,7 @@
       font-size: 2.2rem;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
       text-decoration: none;
-      z-index: 100;
+      z-index: 200;
       transition: 0.2s;
       line-height: 1;
     }
@@ -451,38 +666,172 @@
       height: 36px;
       fill: white;
     }
+    .cta-banner {
+      margin-top: 4rem;
+      text-align: center;
+      background: #e2e8f0;
+      padding: 3rem 2rem;
+      border-radius: 50px;
+    }
+    .cta-banner h2 {
+      font-size: 2rem;
+      color: #0f3b5e;
+      margin-bottom: 1rem;
+    }
+    .cta-banner p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      color: #334155;
+    }
+
+    /* ===== Tablet ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 1rem 1.5rem; }
+      .hero h1 { font-size: 2.3rem; }
+      .section-title { font-size: 1.9rem; }
+      .hero p { font-size: 1.15rem; }
+      .global-card h3 { font-size: 1.6rem; }
+      .global-card .price { font-size: 1.35rem; }
+      .assessment-section h2 { font-size: 2rem; }
+      .assessment-grid { gap: 2rem; }
+    }
+
+    /* ===== Mobile ===== */
     @media (max-width: 860px) {
-      .menu-toggle {
-        display: block;
-      }
+      .container { padding: 1rem 1.1rem; }
+      .menu-toggle { display: block; }
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background: white;
-        padding: 1.5rem 1rem;
+        padding: 0.75rem 1rem;
         border-radius: 24px;
         box-shadow: 0 12px 24px rgba(0,0,0,0.1);
         margin-top: 0.5rem;
-        gap: 1rem;
-        align-items: flex-start;
+        gap: 0;
+        align-items: stretch;
       }
-      .nav-links.show {
-        display: flex;
+      .nav-links.show { display: flex; }
+      .nav-links a {
+        white-space: normal;
+        padding: 0.75rem 0.25rem;
+        font-size: 1.05rem;
+        border-bottom: 1px solid #f1f5f9;
       }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.2rem; }
-      .steps { grid-template-columns: 1fr; }
-      .btn-group { flex-direction: column; width: 100%; }
-      .btn { text-align: center; }
-      .map-overlay { max-width: 100%; }
+      .nav-links a:last-of-type {
+        border-bottom: none;
+      }
+      .nav-links a.nav-highlight {
+        font-weight: 700;
+      }
+      .nav-links .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.75rem;
+        border-bottom: none;
+        padding: 0.7rem 1.4rem;
+      }
+      .nav-links .btn:first-of-type {
+        margin-top: 1rem;
+      }
+      .hero { padding: 2rem 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero p { font-size: 1.05rem; margin-bottom: 1.5rem; }
+      .section-title { font-size: 1.5rem; margin-bottom: 1.1rem; }
+      .section-subtitle { font-size: 1rem; }
+      .btn-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+      }
+      .btn-group .btn { text-align: center; justify-content: center; width: 100%; }
+      .steps { grid-template-columns: 1fr; gap: 1rem; }
+      .global-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+      .global-card { padding: 1.6rem 1.3rem; border-radius: 24px; }
+      .global-card h3 { font-size: 1.5rem; }
+      .global-card .price { font-size: 1.3rem; }
+      .global-card .btn-small { width: 100%; text-align: center; }
+      .card-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .form-card { padding: 1.4rem 1.1rem; border-radius: 24px; }
+      .map-overlay { max-width: 100%; padding: 1.2rem; }
+      .map-overlay h3 { font-size: 1.4rem; }
+      .mapouter { border-radius: 24px; }
+      .cta-banner { padding: 2rem 1.2rem; border-radius: 30px; }
+      .cta-banner h2 { font-size: 1.5rem; }
+      .cta-banner p { font-size: 1rem; }
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
+      }
+      .wa-icon svg { width: 30px; height: 30px; }
+      .footer { padding: 2.2rem 0 1.5rem; }
+      .footer-links { gap: 1.5rem; }
+      .footer-links > div { flex: 1 1 100%; }
+      .city-links {
+        justify-content: flex-start;
+        gap: 0.5rem 0.9rem;
+        font-size: 0.95rem;
+      }
+      .city-links span { display: none; }
+      .city-links a { padding: 0.15rem 0; }
+      /* Assessment section mobile */
+      .assessment-section {
+        padding: 2.2rem 1.4rem;
+        border-radius: 28px;
+      }
+      .assessment-section h2 { font-size: 1.6rem; }
+      .assessment-section p { font-size: 1rem; }
+      .assessment-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .assessment-features {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+      .assessment-cta {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 1.05rem;
+      }
+      .assessment-visual { padding: 1.4rem; }
+    }
+
+    /* ===== Small phones ===== */
+    @media (max-width: 480px) {
+      .container { padding: 0.9rem 0.9rem; }
+      .logo-icon { width: 40px; height: 40px; font-size: 1.5rem; }
+      .logo-academy { font-size: 1.15rem; }
+      .logo-express { font-size: 1.45rem; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero p { font-size: 1rem; }
+      .section-title { font-size: 1.35rem; }
+      .global-card { padding: 1.4rem 1.1rem; }
+      .global-card h3 { font-size: 1.35rem; }
+      .global-card .price { font-size: 1.2rem; }
+      .global-card .curriculum { font-size: 0.85rem; padding: 0.35rem 0.8rem; }
+      .map-overlay { padding: 1rem; }
+      .map-overlay h3 { font-size: 1.2rem; }
+      .cta-banner h2 { font-size: 1.3rem; }
+      .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 14px;
+        right: 14px;
+      }
+      .wa-icon svg { width: 28px; height: 28px; }
+      .assessment-section h2 { font-size: 1.4rem; }
     }
   </style>
 </head>
 <body>
   <!-- floating whatsapp button -->
   <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20class%206-10%20(Maths%2FScience)%20in%20India%20/%20abroad.%20Please%20share%20details." 
-     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
     <span class="wa-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
@@ -500,16 +849,17 @@
           <span class="logo-express">Express</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
-        <a href="/blog/">Blog</a>
+        <a href="cities.html">Cities</a>
+        <a href="free-assessment.html" class="nav-highlight">🎯 Free Assessment</a>
+        <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
-        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20class%206-10%20in%20India%20/%20abroad." class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20class%206-10%20in%20India%20/%20abroad." class="btn btn-wa" target="_blank" rel="noopener">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -524,11 +874,12 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>Maths & Science tuition for Class 6–10 — Odisha, all India & worldwide</h1>
+        <h1>Maths &amp; Science tuition for Class 6–10 — Odisha, all India &amp; worldwide</h1>
         <p>Home tuition in Odisha • Online tuition across India • From ₹300/hr • $15–20/hr abroad</p>
         <div class="btn-group">
           <a href="#enquiry-form" class="btn btn-outline">📋 Request Tutor</a>
-          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20subject%20%5Bmaths/science%5D,%20location%20%5BIndian%20state%20or%20country%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
+          <a href="free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20subject%20%5Bmaths/science%5D,%20location%20%5BIndian%20state%20or%20country%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -538,99 +889,326 @@
         </div>
       </div>
       <div>
-        <img src="https://placehold.co/600x400/0f3b5e/white?text=Tuition+India+%26+World" alt="Pan India & Global Tutoring" style="max-width:100%; border-radius: 40px;">
+        <img src="https://placehold.co/600x400/0f3b5e/white?text=Tuition+India+%26+World" alt="Pan India & Global Tutoring" style="max-width:100%; border-radius: 40px; display:block;">
       </div>
     </div>
   </section>
 
-  <!-- NEW PAN INDIA ONLINE SECTION -->
+  <!-- PAN INDIA ONLINE SECTION -->
   <div class="container" style="margin-top: 4rem;">
     <h2 class="section-title">🇮🇳 Online tuition for all Indian states · from ₹300/hour</h2>
-    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Live Maths & Science classes for Class 6–10, delivered by experienced tutors. We cover CBSE, ICSE, and all state boards.</p>
+    <p class="section-subtitle">Live Maths &amp; Science classes for Class 6–10, delivered by experienced tutors. We cover CBSE, ICSE, and all state boards.</p>
     <div class="global-grid">
       <!-- North India -->
       <div class="global-card">
         <h3>🚩 North India</h3>
         <div class="price">₹300–500 / hour</div>
         <span class="curriculum">CBSE · ICSE · HP Board · Punjab · UP · JAC</span>
-        <p style="margin: 0.8rem 0;">Delhi, UP, Punjab, Haryana, Himachal, J&K, Uttarakhand.</p>
+        <p>Delhi, UP, Punjab, Haryana, Himachal, J&amp;K, Uttarakhand.</p>
         <a href="india/north-india-online-tuition.html" class="btn-small">North details →</a>
       </div>
       <!-- South India -->
       <div class="global-card">
         <h3>🌴 South India</h3>
         <div class="price">₹350–600 / hour</div>
-        <span class="curriculum">CBSE · ICSE · Karnataka · Kerala · Tamil Nadu · AP & TS</span>
-        <p style="margin: 0.8rem 0;">Bengaluru, Chennai, Hyderabad, Kerala, etc.</p>
+        <span class="curriculum">CBSE · ICSE · Karnataka · Kerala · Tamil Nadu · AP &amp; TS</span>
+        <p>Bengaluru, Chennai, Hyderabad, Kerala, etc.</p>
         <a href="india/south-india-online-tuition.html" class="btn-small">South details →</a>
       </div>
       <!-- East & Northeast -->
       <div class="global-card">
-        <h3>🌄 East & Northeast</h3>
+        <h3>🌄 East &amp; Northeast</h3>
         <div class="price">₹300–500 / hour</div>
         <span class="curriculum">CBSE · ICSE · WB Board · Assam · SEBA · AHSEC</span>
-        <p style="margin: 0.8rem 0;">West Bengal, Assam, Bihar, Jharkhand, NE states.</p>
+        <p>West Bengal, Assam, Bihar, Jharkhand, NE states.</p>
         <a href="india/east-india-online-tuition.html" class="btn-small">East details →</a>
       </div>
       <!-- West & Central -->
       <div class="global-card">
-        <h3>⛰️ West & Central</h3>
+        <h3>⛰️ West &amp; Central</h3>
         <div class="price">₹300–550 / hour</div>
         <span class="curriculum">CBSE · ICSE · Maharashtra · Gujarat · MP · Goa</span>
-        <p style="margin: 0.8rem 0;">Mumbai, Pune, Ahmedabad, Nagpur, Bhopal, Indore.</p>
+        <p>Mumbai, Pune, Ahmedabad, Nagpur, Bhopal, Indore.</p>
         <a href="india/west-india-online-tuition.html" class="btn-small">West details →</a>
       </div>
     </div>
-    <p style="margin-top: 1rem; font-style: italic;">👉 Click any region to see state-wise syllabus, tutor profiles, and demo videos. (Placeholder pages – you can build later.)</p>
   </div>
 
   <!-- GLOBAL SECTION (Abroad) -->
   <div class="container" style="margin-top: 4rem;">
     <h2 class="section-title">🌍 Online tuition for students abroad · from $15/hr</h2>
-    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">We teach Mathematics & Science according to your local curriculum. Affordable rates, flexible timings.</p>
+    <p class="section-subtitle">We teach Mathematics &amp; Science according to your local curriculum. Affordable rates, flexible timings.</p>
     <div class="global-grid">
       <!-- USA & Canada -->
       <div class="global-card">
-        <h3>🇺🇸 USA & Canada</h3>
+        <h3>🇺🇸 USA &amp; Canada</h3>
         <div class="price">$18–20 / hour</div>
         <span class="curriculum">Common Core · NGSS · IB · AP</span>
-        <p style="margin: 0.8rem 0;">Grades 6–10 Maths, Biology, Chemistry, Physics.</p>
+        <p>Grades 6–10 Maths, Biology, Chemistry, Physics.</p>
         <a href="global/usa-tuition.html" class="btn-small">USA details →</a>
       </div>
-      <!-- Middle East / Gulf -->
+      <!-- UAE & Middle East -->
       <div class="global-card">
-        <h3>🇦🇪 Middle East / Gulf</h3>
+        <h3>🇦🇪 UAE &amp; Middle East</h3>
         <div class="price">$15–18 · 55–70 AED</div>
-        <span class="curriculum">IGCSE · CBSE · IB · MOE</span>
-        <p style="margin: 0.8rem 0;">Saudi, UAE, Qatar, Kuwait, Oman, Bahrain.</p>
-        <a href="global/middle-east-tuition.html" class="btn-small">Gulf details →</a>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p><strong>Online CBSE Maths &amp; Science Tuition</strong><br>
+        Dubai • Abu Dhabi • Sharjah • Saudi • Qatar • Oman • Kuwait • Bahrain</p>
+        <a href="global/middle-east-tuition.html" class="btn-small">Explore Middle East Tuition →</a>
       </div>
       <!-- Europe -->
       <div class="global-card">
         <h3>🇪🇺 Europe</h3>
         <div class="price">€16–20 / hour</div>
         <span class="curriculum">UK curriculum · IGCSE · IB · local</span>
-        <p style="margin: 0.8rem 0;">Maths & Science for UK, Germany, France, etc.</p>
+        <p>Maths &amp; Science for UK, Germany, France, etc.</p>
         <a href="global/europe-tuition.html" class="btn-small">Europe details →</a>
       </div>
       <!-- Australia & NZ -->
       <div class="global-card">
-        <h3>🇦🇺 Australia & NZ</h3>
+        <h3>🇦🇺 Australia &amp; NZ</h3>
         <div class="price">$22–25 AUD / hour</div>
         <span class="curriculum">Australian Curriculum · NCEA</span>
-        <p style="margin: 0.8rem 0;">Years 6–10. All major cities.</p>
+        <p>Years 6–10. All major cities.</p>
         <a href="global/australia-tuition.html" class="btn-small">Australia details →</a>
       </div>
     </div>
   </div>
 
-  <!-- SUBJECTS SECTION (updated) -->
+  <!-- UAE SPECIAL FOCUS -->
+  <div class="container" style="margin-top: 4rem;">
+    <h2 class="section-title">🇦🇪 Special focus: UAE students</h2>
+    <p class="section-subtitle">
+      Online CBSE Maths &amp; Science tuition for Class 6–10 — tailored for Indian curriculum students in the Emirates.
+      Live 1-on-1 classes, flexible timings (after-school UAE hours), and tutors who know the CBSE &amp; IGCSE syllabus inside out.
+    </p>
+
+    <div class="global-grid">
+      <!-- Dubai -->
+      <div class="global-card">
+        <h3>🏙️ Dubai</h3>
+        <div class="price">55–70 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Dubai — JLT, Marina, Business Bay, Mirdif, Silicon Oasis &amp; more.</p>
+        <a href="global/uae/dubai-tuition.html" class="btn-small">Dubai tuition →</a>
+      </div>
+
+      <!-- Abu Dhabi -->
+      <div class="global-card">
+        <h3>🕌 Abu Dhabi</h3>
+        <div class="price">55–70 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Trusted online tutors for Abu Dhabi students — Khalifa City, Al Reem, Mussafah, Al Ain &amp; more.</p>
+        <a href="global/uae/abu-dhabi-tuition.html" class="btn-small">Abu Dhabi tuition →</a>
+      </div>
+
+      <!-- Sharjah -->
+      <div class="global-card">
+        <h3>📚 Sharjah</h3>
+        <div class="price">50–65 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · MOE</span>
+        <p>Affordable online CBSE tuition for Sharjah families — Al Nahda, Al Majaz, Muwaileh &amp; University City.</p>
+        <a href="global/uae/sharjah-tuition.html" class="btn-small">Sharjah tuition →</a>
+      </div>
+
+      <!-- Ajman -->
+      <div class="global-card">
+        <h3>🌇 Ajman</h3>
+        <div class="price">50–65 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Ajman — Al Nuaimiya, Al Rashidiya &amp; more.</p>
+        <a href="global/uae/ajman-tuition.html" class="btn-small">Ajman tuition →</a>
+      </div>
+
+      <!-- Ras Al Khaimah -->
+      <div class="global-card">
+        <h3>⛰️ Ras Al Khaimah</h3>
+        <div class="price">50–65 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · MOE</span>
+        <p>Trusted CBSE tutors for RAK students — Al Hamra, Mina Al Arab &amp; more.</p>
+        <a href="global/uae/ras-al-khaimah-tuition.html" class="btn-small">RAK tuition →</a>
+      </div>
+
+      <!-- Fujairah -->
+      <div class="global-card">
+        <h3>🏖️ Fujairah</h3>
+        <div class="price">50–65 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Fujairah — all major areas covered.</p>
+        <a href="global/uae/fujairah-tuition.html" class="btn-small">Fujairah tuition →</a>
+      </div>
+
+      <!-- Umm Al Quwain -->
+      <div class="global-card">
+        <h3>🌊 Umm Al Quwain</h3>
+        <div class="price">50–65 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · MOE</span>
+        <p>Affordable online CBSE tuition for Umm Al Quwain families — flexible after-school timings.</p>
+        <a href="global/uae/umm-al-quwain-tuition.html" class="btn-small">UAQ tuition →</a>
+      </div>
+
+      <!-- All UAE -->
+      <div class="global-card">
+        <h3>🇦🇪 All UAE</h3>
+        <div class="price">From 55 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Dubai, Abu Dhabi, Sharjah, Ajman, RAK, Fujairah &amp; Umm Al Quwain — same tutors, same quality, online only.</p>
+        <a href="global/uae-tuition.html" class="btn-small">UAE overview →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIDDLE EAST COUNTRIES -->
+  <div class="container" style="margin-top: 4rem;">
+    <h2 class="section-title">🌍 Middle East — country-wise tuition</h2>
+    <p class="section-subtitle">
+      Online CBSE, IGCSE and IB Maths &amp; Science tuition for Class 6–10 students across the Gulf.
+      Same trusted tutors, localised timings for each country.
+    </p>
+
+    <div class="global-grid cols-3">
+      <!-- Qatar -->
+      <div class="global-card">
+        <h3>🇶🇦 Qatar</h3>
+        <div class="price">55–70 QAR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Doha, Al Wakrah, Al Khor &amp; all Qatar.</p>
+        <div class="sub-links">
+          <a href="global/qatar/doha-tuition.html">Doha</a>
+          <a href="global/qatar/al-wakrah-tuition.html">Al Wakrah</a>
+          <a href="global/qatar/al-khor-tuition.html">Al Khor</a>
+        </div>
+        <a href="global/qatar/" class="btn-small">Qatar tuition →</a>
+      </div>
+
+      <!-- Saudi Arabia -->
+      <div class="global-card">
+        <h3>🇸🇦 Saudi Arabia</h3>
+        <div class="price">55–70 SAR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Riyadh, Jeddah, Dammam &amp; all KSA.</p>
+        <div class="sub-links">
+          <a href="global/saudi-arabia/riyadh-tuition.html">Riyadh</a>
+          <a href="global/saudi-arabia/jeddah-tuition.html">Jeddah</a>
+          <a href="global/saudi-arabia/dammam-tuition.html">Dammam</a>
+        </div>
+        <a href="global/saudi-arabia/" class="btn-small">Saudi tuition →</a>
+      </div>
+
+      <!-- Oman -->
+      <div class="global-card">
+        <h3>🇴🇲 Oman</h3>
+        <div class="price">5.5–7 OMR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Muscat, Salalah, Sohar &amp; all Oman.</p>
+        <div class="sub-links">
+          <a href="global/oman/muscat-tuition.html">Muscat</a>
+          <a href="global/oman/salalah-tuition.html">Salalah</a>
+          <a href="global/oman/sohar-tuition.html">Sohar</a>
+        </div>
+        <a href="global/oman/" class="btn-small">Oman tuition →</a>
+      </div>
+
+      <!-- Kuwait -->
+      <div class="global-card">
+        <h3>🇰🇼 Kuwait</h3>
+        <div class="price">4.5–5.5 KWD / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Kuwait City, Hawalli, Salmiya &amp; all Kuwait.</p>
+        <div class="sub-links">
+          <a href="global/kuwait/kuwait-city-tuition.html">Kuwait City</a>
+          <a href="global/kuwait/hawalli-tuition.html">Hawalli</a>
+          <a href="global/kuwait/salmiya-tuition.html">Salmiya</a>
+        </div>
+        <a href="global/kuwait/" class="btn-small">Kuwait tuition →</a>
+      </div>
+
+      <!-- Bahrain -->
+      <div class="global-card">
+        <h3>🇧🇭 Bahrain</h3>
+        <div class="price">5.5–7 BHD / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition for Class 6–10 in Manama, Riffa, Muharraq &amp; all Bahrain.</p>
+        <div class="sub-links">
+          <a href="global/bahrain/manama-tuition.html">Manama</a>
+          <a href="global/bahrain/riffa-tuition.html">Riffa</a>
+          <a href="global/bahrain/muharraq-tuition.html">Muharraq</a>
+        </div>
+        <a href="global/bahrain/" class="btn-small">Bahrain tuition →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJECTS SECTION -->
   <div class="container" style="margin-top: 3rem;">
     <h2 class="section-title">📚 Subjects we teach</h2>
     <div class="card-grid">
       <div class="card"><h3>Mathematics Tuition</h3><p>CBSE · ICSE · State Boards · IGCSE · IB · Common Core</p><a href="maths-tuition.html" style="color:#f59e0b;">Learn more →</a></div>
       <div class="card"><h3>Science Tuition</h3><p>Physics · Chemistry · Biology · AP · NGSS · All boards</p><a href="science-tuition.html" style="color:#f59e0b;">Learn more →</a></div>
     </div>
+  </div>
+
+  <!-- ============ FREE ASSESSMENT SECTION ============ -->
+  <div class="container">
+    <section class="assessment-section" id="free-assessment">
+      <div class="assessment-grid">
+        <div>
+          <span class="assessment-badge">🎯 100% FREE · ONLINE ONLY</span>
+          <h2>Book a Free Online Assessment</h2>
+          <p>
+            Not sure where your child stands in Maths or Science? Take our
+            <strong style="color:#fbbf24;">free online assessment</strong> — a set of
+            auto-generated questions matched to your child's class level. Instant feedback,
+            zero commitment.
+          </p>
+
+          <ul class="assessment-features">
+            <li>100% online · no home visit</li>
+            <li>Class 6–10 · Maths &amp; Science</li>
+            <li>CBSE · ICSE · IGCSE · IB · State</li>
+            <li>Questions auto-matched to class level</li>
+            <li>Instant score &amp; gap report</li>
+            <li>No payment required</li>
+          </ul>
+
+          <a href="free-assessment.html" class="assessment-cta">🎯 Start Free Assessment →</a>
+        </div>
+
+        <div class="assessment-visual">
+          <h3>How It Works</h3>
+          <div class="assessment-steps">
+            <div class="assessment-step">
+              <span class="num">1</span>
+              <div class="step-text">
+                <strong>Fill a 1-minute form</strong>
+                Tell us class, board &amp; subject.
+              </div>
+            </div>
+            <div class="assessment-step">
+              <span class="num">2</span>
+              <div class="step-text">
+                <strong>Get your question set</strong>
+                Auto-generated questions matched to your child's class level.
+              </div>
+            </div>
+            <div class="assessment-step">
+              <span class="num">3</span>
+              <div class="step-text">
+                <strong>Attempt online</strong>
+                Timed, at your own pace — from any device.
+              </div>
+            </div>
+            <div class="assessment-step">
+              <span class="num">4</span>
+              <div class="step-text">
+                <strong>Get instant results</strong>
+                Score, strengths, gaps &amp; a recommended learning plan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- TUITION MODES -->
@@ -661,19 +1239,19 @@
     <div class="map-wrapper">
       <div class="map-overlay">
         <h3>Headquartered in Odisha, serving the world</h3>
-        <p>Home tuition in Odisha cities • Online tuition for every Indian state & 20+ countries</p>
-        <div class="highlight-cities">📚 Maths & Science for Class 6-10, any curriculum</div>
+        <p>Home tuition in Odisha cities • Online tuition for every Indian state &amp; 20+ countries</p>
+        <div class="highlight-cities">📚 Maths &amp; Science for Class 6-10, any curriculum</div>
       </div>
       <div class="mapouter">
         <div class="gmap_canvas">
-          <iframe 
-            src="https://www.google.com/maps/embed/v1/place?q=Odisha&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          <iframe
+            src="https://maps.google.com/maps?q=Odisha,%20India&t=&z=7&ie=UTF8&iwloc=&output=embed"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="AcademyExpress location – Odisha, India">
           </iframe>
         </div>
-        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank" rel="noopener noreferrer" class="gme-generated-link">Embed Map</a>
       </div>
     </div>
   </div>
@@ -682,13 +1260,25 @@
   <div class="container" style="margin-top: 4rem;">
     <h2 class="section-title">⚡ How It Works</h2>
     <div class="steps">
-      <div class="step"><h3>1️⃣</h3><h4>Submit Request</h4><p>Tell us class, board, location</p></div>
-      <div class="step"><h3>2️⃣</h3><h4>We Match a Tutor</h4><p>Experienced with your syllabus</p></div>
-      <div class="step"><h3>3️⃣</h3><h4>Start Learning</h4><p>Online or at home (Odisha)</p></div>
+      <div class="step">
+        <span class="step-emoji">1️⃣</span>
+        <h3>Submit Request</h3>
+        <p>Tell us class, board, location</p>
+      </div>
+      <div class="step">
+        <span class="step-emoji">2️⃣</span>
+        <h3>We Match a Tutor</h3>
+        <p>Experienced with your syllabus</p>
+      </div>
+      <div class="step">
+        <span class="step-emoji">3️⃣</span>
+        <h3>Start Learning</h3>
+        <p>Online or at home (Odisha)</p>
+      </div>
     </div>
   </div>
 
-  <!-- ENQUIRY FORM (updated with state/region) -->
+  <!-- ENQUIRY FORM -->
   <div class="container" id="enquiry-form" style="margin-top: 4rem;">
     <h2 class="section-title">📝 Request a Tutor (India / abroad)</h2>
     <div class="form-card">
@@ -699,7 +1289,7 @@
           <select id="subject">
             <option>Mathematics</option>
             <option>Science</option>
-            <option>Both Maths & Science</option>
+            <option>Both Maths &amp; Science</option>
           </select>
         </div>
         <div class="form-row">
@@ -736,21 +1326,21 @@
   </div>
 
   <!-- TUTOR RECRUITMENT -->
-  <div class="container" style="margin-top: 4rem; text-align: center; background: #e2e8f0; padding: 3rem; border-radius: 50px;">
-    <h2 style="font-size: 2rem; color: #0f3b5e;">Become a Tutor with AcademyExpress</h2>
-    <p style="margin: 1rem 0; font-size: 1.2rem;">Inspire students across India & the world — work from home</p>
-    <a href="tutor-join.html" class="btn" style="font-size: 1.2rem; padding: 0.8rem 2.5rem;">Join as Tutor →</a>
+  <div class="container cta-banner">
+    <h2>Become a Tutor with AcademyExpress</h2>
+    <p>Inspire students across India &amp; the world — work from home</p>
+    <a href="tutor-join.html" class="btn" style="font-size: 1.1rem; padding: 0.8rem 2.5rem;">Join as Tutor →</a>
   </div>
 
-  <!-- FOOTER with India & global links -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10: Odisha, all India & worldwide</p>
+          <p>Maths &amp; Science tuition<br>Class 6–10: Odisha, all India &amp; worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
-          <a href="https://wa.me/919937641801">
+          <a href="https://wa.me/919937641801" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -770,22 +1360,33 @@
         <div>
           <h4>Pan India online</h4>
           <a href="india/north-india-online-tuition.html">North India</a> | <a href="india/south-india-online-tuition.html">South India</a><br>
-          <a href="india/east-india-online-tuition.html">East & NE</a> | <a href="india/west-india-online-tuition.html">West & Central</a>
+          <a href="india/east-india-online-tuition.html">East &amp; NE</a> | <a href="india/west-india-online-tuition.html">West &amp; Central</a>
         </div>
         <div>
           <h4>Global tuition</h4>
-          <a href="global/usa-tuition.html">USA & Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
-          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia</a><br>
+          <a href="global/usa-tuition.html">USA &amp; Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
+          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia</a>
+          <div style="margin-top: 0.5rem;">
+            <a href="global/uae-tuition.html">UAE</a> |
+            <a href="global/qatar/">Qatar</a> |
+            <a href="global/saudi-arabia/">Saudi</a> |
+            <a href="global/oman/">Oman</a>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <a href="global/kuwait/">Kuwait</a> |
+            <a href="global/bahrain/">Bahrain</a>
+          </div>
           <div style="margin-top: 0.8rem;">
-            <a href="about.html">About</a> | <a href="/blog/">Blog</a> | <a href="contact.html">Contact</a><br>
+            <a href="free-assessment.html">Free Assessment</a><br>
+            <a href="about.html">About</a> | <a href="blog.html">Blog</a> | <a href="contact.html">Contact</a><br>
             <a href="tutor-join.html">Join as Tutor</a>
           </div>
           <div class="sitemap-link">
-            <a href="/sitemap.xml">📊 Sitemap</a>
+            <a href="sitemap.xml">📊 Sitemap</a>
           </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. Maths & Science for Class 6-10, anywhere.</p>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
     </div>
   </footer>
 
@@ -794,10 +1395,11 @@
     const toggleBtn = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
     toggleBtn.addEventListener('click', function() {
-      nav.classList.toggle('show');
+      const isOpen = nav.classList.toggle('show');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // enquiry form: whatsapp prefill (updated with location)
+    // enquiry form: whatsapp prefill
     function sendEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -816,9 +1418,10 @@
 
     // close hamburger when link clicked
     document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', (e) => {
+      link.addEventListener('click', () => {
         if (window.innerWidth <= 860) {
           nav.classList.remove('show');
+          toggleBtn.setAttribute('aria-expanded', 'false');
         }
       });
     });
