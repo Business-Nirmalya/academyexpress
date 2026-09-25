@@ -1,1 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Maths & Science Tips for Class 6–10 | AcademyExpress</title>
+  <meta name="description" content="Free Maths & Science study tips, exam strategies, and curriculum guides for Class 6–10 students in India and worldwide. By AcademyExpress tutors.">
+  <meta name="keywords" content="CBSE maths tips, class 10 science, ICSE study guide, maths tuition blog, science tuition blog">
+  <meta name="author" content="AcademyExpress">
+  <link rel="canonical" href="https://academyexpress.in/blog/">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog – Maths & Science Tips for Class 6–10 | AcademyExpress">
+  <meta property="og:description" content="Free study tips, exam strategies, and curriculum guides for Class 6–10 students.">
+  <meta property="og:image" content="https://academyexpress.in/blog/images/blog-cover.jpg">
+  <meta property="og:url" content="https://academyexpress.in/blog/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    /* ===== HEADER ===== */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: #f59e0b;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transform: rotate(-5deg);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-academy { font-size: 1.4rem; color: #0f3b5e; font-weight: 700; }
+    .logo-express {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f3b5e 0%, #f59e0b 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #0f3b5e;
+      cursor: pointer;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+    .menu-toggle:hover { background: #e2e8f0; }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: #f59e0b; }
+    .nav-links a.nav-highlight { color: #f59e0b; font-weight: 600; }
+    .nav-links a.active { color: #f59e0b; font-weight: 700; }
+    .btn {
+      display: inline-block;
+      background: #0f3b5e;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-wa { background: #25D366; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-wa:hover { background: #20b859; }
+    .btn-call { background: #0284c7; }
+    .btn-outline {
+      background: transparent;
+      color: #0f3b5e;
+      border: 2px solid #0f3b5e;
+    }
+    .btn-outline:hover { background: #0f3b5e; color: white; }
+    .btn-assess { background: #f59e0b; color: white; }
+    .btn-assess:hover { background: #d97706; }
+    .wa-logo { width: 18px; height: 18px; fill: white; }
+    .btn-wa .wa-logo { width: 20px; height: 20px; }
+
+    /* ===== BLOG HERO ===== */
+    .blog-hero {
+      background: linear-gradient(145deg, #e6f0fa 0%, #ffffff 80%);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .blog-hero h1 {
+      font-size: 2.8rem;
+      color: #0f3b5e;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+    .blog-hero p {
+      font-size: 1.2rem;
+      color: #334155;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-wrap {
+      max-width: 640px;
+      margin: 2rem auto 0;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 1rem 3.5rem 1rem 1.5rem;
+      border-radius: 60px;
+      border: 2px solid #e2e8f0;
+      background: white;
+      font-size: 1.05rem;
+      font-family: inherit;
+      color: #1e293b;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #f59e0b;
+      box-shadow: 0 8px 24px rgba(245,158,11,0.15);
+    }
+    .search-icon {
+      position: absolute;
+      right: 1.3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+    .search-clear {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #e2e8f0;
+      border: none;
+      color: #475569;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .search-clear:hover { background: #cbd5e1; }
+    .search-clear.show { display: flex; }
+
+    /* ===== FILTER TABS ===== */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.5rem 0 2rem;
+      justify-content: center;
+    }
+    .filter-tabs button {
+      background: white;
+      border: 2px solid #e2e8f0;
+      color: #334155;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: inherit;
+    }
+    .filter-tabs button:hover {
+      border-color: #f59e0b;
+      color: #f59e0b;
+    }
+    .filter-tabs button.active {
+      background: #0f3b5e;
+      color: white;
+      border-color: #0f3b5e;
+    }
+
+    /* ===== FEATURED POST ===== */
+    .featured-post {
+      background: white;
+      border-radius: 40px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      margin: 1rem 0 3rem;
+      transition: 0.2s;
+    }
+    .featured-post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-color: #f59e0b;
+    }
+    .featured-post img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+    .featured-content {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .featured-badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: white;
+      padding: 0.3rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+    .featured-content h2 {
+      font-size: 1.9rem;
+      color: #0f3b5e;
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+    }
+    .featured-content p {
+      color: #475569;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ===== BLOG GRID ===== */
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 0 0 2rem;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: #f1f5f9;
+    }
+    .blog-card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .blog-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 0.25rem 0.85rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      align-self: flex-start;
+    }
+    .blog-card h3 {
+      color: #0f3b5e;
+      font-size: 1.35rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      color: #475569;
+      font-size: 0.98rem;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+    .blog-meta {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+    }
+    .read-more {
+      color: #f59e0b;
+      font-weight: 600;
+      text-decoration: none;
+      align-self: flex-start;
+      transition: color 0.2s;
+    }
+    .read-more:hover { color: #d97706; }
+
+    /* ===== LOAD MORE ===== */
+    .load-more-wrap {
+      text-align: center;
+      margin: 1rem 0 3rem;
+    }
+    .load-more-btn {
+      background: transparent;
+      color: #0f3b5e;
+      border: 2px solid #0f3b5e;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .load-more-btn:hover {
+      background: #0f3b5e;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15,59,94,0.2);
+    }
+    .load-more-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .load-count {
+      display: block;
+      margin-top: 0.8rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* ===== NO RESULTS ===== */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: white;
+      border-radius: 32px;
+      border: 1px dashed #cbd5e1;
+      display: none;
+    }
+    .no-results.show { display: block; }
+    .no-results .emoji { font-size: 3rem; margin-bottom: 1rem; }
+    .no-results h3 {
+      color: #0f3b5e;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .no-results p { color: #64748b; }
+
+    /* ===== BLOG CTA ===== */
+    .blog-cta {
+      background: linear-gradient(135deg, #0f3b5e 0%, #1e5a8a 100%);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 40px;
+      text-align: center;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-cta::before {
+      content: "📬";
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-size: 10rem;
+      opacity: 0.06;
+    }
+    .blog-cta h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+    .blog-cta p {
+      font-size: 1.1rem;
+      color: #dbeafe;
+      margin-bottom: 1.8rem;
+    }
+    .blog-cta .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0f3b5e;
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    .footer a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .footer-links > div { flex: 1 1 200px; min-width: 180px; }
+    .footer h4 { margin-bottom: 0.6rem; }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      z-index: 200;
+      transition: 0.2s;
+    }
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.1) rotate(5deg);
+    }
+    .wa-icon svg { width: 36px; height: 36px; fill: white; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 1rem 1.5rem; }
+      .blog-hero h1 { font-size: 2.3rem; }
+      .featured-post { grid-template-columns: 1fr; }
+      .featured-post img { min-height: 240px; }
+    }
+    @media (max-width: 860px) {
+      .container { padding: 1rem 1.1rem; }
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1.5rem 1rem;
+        border-radius: 24px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        margin-top: 0.5rem;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links a { white-space: normal; }
+      .nav-links .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .blog-hero { padding: 2rem 0 1.5rem; }
+      .blog-hero h1 { font-size: 1.9rem; }
+      .blog-hero p { font-size: 1.05rem; }
+      .blog-list { grid-template-columns: 1fr; gap: 1.2rem; }
+      .blog-card { border-radius: 24px; }
+      .featured-post { border-radius: 24px; }
+      .featured-content { padding: 1.6rem; }
+      .featured-content h2 { font-size: 1.4rem; }
+      .blog-cta { padding: 2rem 1.2rem; border-radius: 28px; }
+      .blog-cta h2 { font-size: 1.5rem; }
+      .blog-cta .btn-group { flex-direction: column; }
+      .blog-cta .btn { width: 100%; text-align: center; }
+      .footer { padding: 2.2rem 0 1.5rem; }
+      .footer-links > div { flex: 1 1 100%; }
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
+      }
+      .wa-icon svg { width: 30px; height: 30px; }
+      .search-input { font-size: 1rem; padding: 0.9rem 3rem 0.9rem 1.2rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0.9rem 0.9rem; }
+      .logo-icon { width: 40px; height: 40px; font-size: 1.5rem; }
+      .logo-academy { font-size: 1.15rem; }
+      .logo-express { font-size: 1.45rem; }
+      .blog-hero h1 { font-size: 1.6rem; }
+      .whatsapp-float { width: 52px; height: 52px; bottom: 14px; right: 14px; }
+      .wa-icon svg { width: 28px; height: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20read%20your%20blog%20and%20have%20a%20question."
+     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+    <span class="wa-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-flex">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">📘</div>
+        <div class="logo-text">
+          <span class="logo-academy">Academy</span>
+          <span class="logo-express">Express</span>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../cities/bhubaneswar-home-tuition.html">Cities</a>
+        <a href="../free-assessment.html" class="nav-highlight">🎯 Free Assessment</a>
+        <a href="index.html" class="active">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../tutor-join.html" class="btn btn-outline">Join as Tutor</a>
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="tel:+919937641801" class="btn btn-call">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== BLOG HERO ===== -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>📚 AcademyExpress Blog</h1>
+      <p>Free Maths &amp; Science study tips, exam strategies, and curriculum guides for Class 6–10 students — in India and worldwide.</p>
+
+      <!-- Search Bar -->
+      <div class="search-wrap">
+        <input type="text" id="blogSearch" class="search-input" placeholder="Search posts by title, topic, or keyword..." aria-label="Search blog posts">
+        <span class="search-icon" id="searchIcon">🔍</span>
+        <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER TABS ===== -->
+  <div class="container">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="active" data-filter="all">All Posts</button>
+      <button data-filter="maths">Maths</button>
+      <button data-filter="science">Science</button>
+      <button data-filter="exams">Exams</button>
+      <button data-filter="curriculum">Curriculum</button>
+      <button data-filter="uae">UAE &amp; Middle East</button>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED POST (optional — uncomment if you want a featured post) ===== -->
+  <!--
+  <div class="container">
+    <article class="featured-post">
+      <img src="images/featured-thumb.jpg" alt="Featured post title" loading="lazy">
+      <div class="featured-content">
+        <span class="featured-badge">⭐ FEATURED</span>
+        <h2>Featured Post Title Here</h2>
+        <p>Short 1-2 sentence summary of the featured post.</p>
+        <div class="blog-meta">📅 Month DD, YYYY · ⏱️ X min read</div>
+        <a href="posts/featured-post.html" class="read-more">Read article →</a>
+      </div>
+    </article>
+  </div>
+  -->
+
+  <!-- ===== BLOG GRID ===== -->
+  <div class="container">
+    <div class="blog-list" id="blogList">
+
+      <!-- ═══════════════════════════════════════════════════════════
+           PASTE NEW CARDS HERE — NEWEST AT TOP
+           The card list auto-sorts by data-date anyway,
+           but keeping newest at top makes source easier to read.
+           ═══════════════════════════════════════════════════════════ -->
+
+      <!-- ⬇️ CARD: Class 10 Maths Common Mistakes -->
+      <article class="blog-card" data-category="maths" data-date="2025-02-15">
+        <img src="images/class-10-maths-thumb.jpg" alt="5 Common Maths Mistakes Class 10 Students Make" loading="lazy">
+        <div class="blog-card-content">
+          <span class="blog-tag">Maths · Class 10</span>
+          <h3>5 Common Maths Mistakes Class 10 Students Make</h3>
+          <p>After teaching hundreds of CBSE Class 10 students, our tutors see the same 5 mistakes again and again. Here's how to fix each one before boards.</p>
+          <div class="blog-meta">📅 Feb 15, 2025 · ⏱️ 5 min read</div>
+          <a href="posts/class-10-maths-common-mistakes.html" class="read-more">Read more →</a>
+        </div>
+      </article>
+
+      <!-- ⬇️ CARD: CBSE vs ICSE -->
+      <article class="blog-card" data-category="curriculum" data-date="2025-02-10">
+        <img src="images/cbse-vs-icse-thumb.jpg" alt="CBSE vs ICSE comparison" loading="lazy">
+        <div class="blog-card-content">
+          <span class="blog-tag">Curriculum Guide</span>
+          <h3>CBSE vs ICSE: Which Board Is Better for Your Child?</h3>
+          <p>A fair, side-by-side comparison of CBSE and ICSE — syllabus, difficulty, exam pattern, and future career implications for Class 6–10 students.</p>
+          <div class="blog-meta">📅 Feb 10, 2025 · ⏱️ 6 min read</div>
+          <a href="posts/cbse-vs-icse-which-is-better.html" class="read-more">Read more →</a>
+        </div>
+      </article>
+
+      <!-- ⬇️ CARD: UAE CBSE Tuition Guide -->
+      <article class="blog-card" data-category="uae" data-date="2025-02-05">
+        <img src="images/uae-tuition-thumb.jpg" alt="Online CBSE tuition for UAE students" loading="lazy">
+        <div class="blog-card-content">
+          <span class="blog-tag">UAE · Middle East</span>
+          <h3>Online CBSE Tuition for UAE Students: A Parent's Guide</h3>
+          <p>How Indian families in Dubai, Abu Dhabi &amp; Sharjah can find the best online CBSE Maths &amp; Science tutors for Class 6–10 — pricing, timing, and tips.</p>
+          <div class="blog-meta">📅 Feb 05, 2025 · ⏱️ 8 min read</div>
+          <a href="posts/online-cbse-tuition-uae-guide.html" class="read-more">Read more →</a>
+        </div>
+      </article>
+
+      <!-- ⬆️ PASTE NEW CARDS ABOVE THIS LINE ⬆️ -->
+
+      <!-- No results message -->
+      <div class="no-results" id="noResults">
+        <div class="emoji">🔍</div>
+        <h3>No posts found</h3>
+        <p>Try a different keyword or clear the search.</p>
+      </div>
+
+    </div>
+
+    <!-- ===== LOAD MORE BUTTON ===== -->
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button type="button" class="load-more-btn" id="loadMoreBtn">
+        Load more posts <span>↓</span>
+      </button>
+      <span class="load-count" id="loadCount"></span>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CTA ===== -->
+  <div class="container">
+    <section class="blog-cta">
+      <h2>🎯 Ready to try a free assessment?</h2>
+      <p>Auto-generated questions matched to your child's class level. Instant results. No payment.</p>
+      <div class="btn-group">
+        <a href="../free-assessment.html" class="btn btn-assess">Start Free Assessment →</a>
+        <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <div>
+          <h4>AcademyExpress</h4>
+          <p>Maths &amp; Science tuition<br>Class 6–10: Odisha, India &amp; Worldwide</p>
+          <p>📞 <a href="tel:+919937641801">+91 99376 41801</a></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="../index.html">Home</a><br>
+          <a href="../about.html">About</a><br>
+          <a href="../contact.html">Contact</a><br>
+          <a href="../tutor-join.html">Join as Tutor</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="../free-assessment.html">Free Assessment</a><br>
+          <a href="../maths-tuition.html">Maths Tuition</a><br>
+          <a href="../science-tuition.html">Science Tuition</a>
+        </div>
+        <div>
+          <h4>Global</h4>
+          <a href="../global/uae/dubai-tuition.html">Dubai</a><br>
+          <a href="../global/uae/abu-dhabi-tuition.html">Abu Dhabi</a><br>
+          <a href="../global/usa-tuition.html">USA</a>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* ===== CONFIG ===== */
+    const POSTS_PER_PAGE = 6;   // Show this many initially and on each "Load more" click
+
+    /* ===== 1. HAMBURGER MENU ===== */
+    const toggleBtn = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const open = nav.classList.toggle('show');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    document.querySelectorAll('#navLinks a').forEach(l => l.addEventListener('click', () => {
+      if (window.innerWidth <= 860) {
+        nav.classList.remove('show');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    }));
+
+    /* ===== 2. AUTO-SORT BY DATE (NEWEST FIRST) ===== */
+    const blogList = document.getElementById('blogList');
+    const noResultsEl = document.getElementById('noResults');
+    if (blogList) {
+      const cards = [...blogList.querySelectorAll('.blog-card')];
+      cards.sort((a, b) => {
+        const da = new Date(a.dataset.date || '1970-01-01');
+        const db = new Date(b.dataset.date || '1970-01-01');
+        return db - da;
+      });
+      cards.forEach(c => blogList.insertBefore(c, noResultsEl));
+    }
+
+    /* ===== 3. LOAD MORE ===== */
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const loadCountEl = document.getElementById('loadCount');
+    const loadMoreWrap = document.getElementById('loadMoreWrap');
+    let visibleCount = POSTS_PER_PAGE;
+
+    function applyLoadMore() {
+      const allCards = [...document.querySelectorAll('.blog-card')];
+      const total = allCards.length;
+      allCards.forEach((card, i) => {
+        // Respect other filters — if card has inline "display:none" from search, don't touch it
+        if (card.dataset.searchHidden === 'true') return;
+        card.style.display = i < visibleCount ? '' : 'none';
+      });
+
+      // Update count text
+      const shown = Math.min(visibleCount, total);
+      if (loadCountEl) {
+        loadCountEl.textContent = total > 0 ? `Showing ${shown} of ${total} posts` : '';
+      }
+
+      // Hide button if all visible
+      if (loadMoreWrap) {
+        loadMoreWrap.style.display = visibleCount >= total ? 'none' : 'block';
+      }
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        visibleCount += POSTS_PER_PAGE;
+        applyLoadMore();
+      });
+    }
+
+    // Initial pass
+    applyLoadMore();
+
+    /* ===== 4. SEARCH BAR (LIVE FILTER) ===== */
+    const searchInput = document.getElementById('blogSearch');
+    const searchClear = document.getElementById('searchClear');
+    let activeFilter = 'all';
+
+    function filterCards() {
+      const q = (searchInput?.value || '').toLowerCase().trim();
+      const allCards = [...document.querySelectorAll('.blog-card')];
+      let matchingTotal = 0;
+
+      // First pass: how many cards match the search+filter?
+      allCards.forEach(card => {
+        const matchesSearch = !q || card.textContent.toLowerCase().includes(q);
+        const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+        card.dataset.matches = (matchesSearch && matchesFilter) ? 'true' : 'false';
+        if (card.dataset.matches === 'true') matchingTotal++;
+      });
+
+      // Second pass: show only first `visibleCount` matching cards
+      let shown = 0;
+      allCards.forEach(card => {
+        if (card.dataset.matches === 'true') {
+          if (shown < visibleCount) {
+            card.style.display = '';
+            shown++;
+          } else {
+            card.style.display = 'none';
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // No results message
+      if (noResultsEl) noResultsEl.classList.toggle('show', matchingTotal === 0);
+
+      // Show / hide clear button
+      if (searchClear) searchClear.classList.toggle('show', q.length > 0);
+
+      // Show / hide Load More based on remaining matches
+      if (loadMoreWrap) {
+        loadMoreWrap.style.display = shown < matchingTotal ? 'block' : 'none';
+      }
+      if (loadCountEl) {
+        loadCountEl.textContent = matchingTotal > 0
+          ? `Showing ${shown} of ${matchingTotal} matching posts`
+          : '';
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        visibleCount = POSTS_PER_PAGE;   // Reset pagination on new search
+        filterCards();
+      });
+    }
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        visibleCount = POSTS_PER_PAGE;
+        filterCards();
+        searchInput.focus();
+      });
+    }
+
+    /* ===== 5. CATEGORY FILTER TABS ===== */
+    document.querySelectorAll('#filterTabs button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#filterTabs button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter || 'all';
+        visibleCount = POSTS_PER_PAGE;   // Reset pagination on filter change
+        filterCards();
+      });
+    });
+
+    /* ===== 6. LOAD MORE CLICK — respect active search/filter ===== */
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        // visibleCount already incremented above; now re-run filterCards to respect search
+        filterCards();
+      });
+    }
+
+    // Re-run filter (to initialise search logic) on load
+    filterCards();
+  </script>
+</body>
+</html>
