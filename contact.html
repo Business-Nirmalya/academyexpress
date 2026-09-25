@@ -47,7 +47,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    /* New Logo Styling - exactly like homepage */
     .logo {
       display: flex;
       align-items: center;
@@ -121,6 +120,14 @@
     .nav-links a:hover {
       color: #f59e0b;
     }
+    .nav-links a.nav-highlight {
+      color: #f59e0b;
+      font-weight: 600;
+    }
+    .nav-links a.active {
+      color: #f59e0b;
+      font-weight: 700;
+    }
     .btn {
       display: inline-block;
       background: #0f3b5e;
@@ -158,12 +165,22 @@
       background: #0f3b5e;
       color: white;
     }
+    .btn-assess {
+      background: #f59e0b;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-assess:hover {
+      background: #d97706;
+    }
     .btn-group {
       display: flex;
       gap: 0.8rem;
       flex-wrap: wrap;
     }
-    /* whatsapp logo svg style */
     .wa-logo {
       width: 18px;
       height: 18px;
@@ -203,7 +220,6 @@
       color: #334155;
       margin-bottom: 2rem;
     }
-    /* section title */
     .section-title {
       font-size: 2.2rem;
       color: #0f3b5e;
@@ -267,6 +283,7 @@
       border: 1px solid #cbd5e1;
       font-size: 1rem;
       background: #f9f9fc;
+      font-family: inherit;
     }
     input:focus, select:focus {
       outline: 2px solid #f59e0b;
@@ -312,6 +329,10 @@
       gap: 2rem;
       justify-content: space-between;
     }
+    .footer-links > div {
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
     .footer-cities {
       display: flex;
       flex-wrap: wrap;
@@ -320,6 +341,16 @@
     }
     .footer-cities a {
       color: #b9d9f5;
+    }
+    .sitemap-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .sitemap-link a {
+      color: #fbbf24;
+      text-decoration: none;
+      border-bottom: 1px dotted #fbbf24;
     }
     /* WhatsApp floating button */
     .whatsapp-float {
@@ -370,6 +401,12 @@
       .nav-links.show {
         display: flex;
       }
+      .nav-links a { white-space: normal; }
+      .nav-links .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+      }
       .header-flex {
         flex-wrap: wrap;
       }
@@ -395,13 +432,22 @@
         grid-template-columns: 1fr !important;
         gap: 1rem !important;
       }
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
+      }
+      .wa-icon svg { width: 30px; height: 30px; }
+      .footer { padding: 2.2rem 0 1.5rem; }
+      .footer-links > div { flex: 1 1 100%; }
     }
   </style>
 </head>
 <body>
   <!-- floating whatsapp button -->
   <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question%20from%20the%20Contact%20page." 
-     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
     <span class="wa-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
@@ -419,16 +465,17 @@
           <span class="logo-express">Express</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="cities/bhubaneswar-home-tuition.html">Cities</a>
-        <a href="/blog/">Blog</a>
+        <a href="free-assessment.html" class="nav-highlight">🎯 Free Assessment</a>
+        <a href="blog/index.html">Blog</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
         <a href="tutor-join.html" class="btn btn-outline">Join as Tutor</a>
-        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question%20from%20Contact%20page." class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20have%20a%20question%20from%20Contact%20page." class="btn btn-wa" target="_blank" rel="noopener">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -439,21 +486,21 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER with updated global messaging -->
+  <!-- PAGE HEADER -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <h1>Contact AcademyExpress</h1>
-        <p>We're here to help – whether you're in Odisha, across India, or anywhere in the world. Reach out for Maths & Science tuition.</p>
+        <p>We're here to help – whether you're in Odisha, across India, or anywhere in the world. Reach out for Maths &amp; Science tuition.</p>
         <div class="btn-group">
           <a href="#enquiry-form" class="btn btn-outline">📋 Request Tutor</a>
-          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20curriculum%20%5Bcurriculum%5D,%20location%20%5Bcity/country%5D.%20Please%20guide." class="btn btn-wa" target="_blank">
+          <a href="free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+          <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20-%20class%20%5Bclass%5D,%20curriculum%20%5Bcurriculum%5D,%20location%20%5Bcity/country%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
-            <span>Chat on WhatsApp</span>
+            <span>WhatsApp</span>
           </a>
-          <a href="tutor-join.html" class="btn">👩‍🏫 Join as Tutor</a>
         </div>
       </div>
       <div>
@@ -463,19 +510,19 @@
   </section>
 
   <!-- Global presence badges -->
-  <div class="container" style="text-align: center; margin-top: -1rem;">
+  <div class="container" style="text-align: center; margin-top: 1rem;">
     <span class="global-badge">🏡 Home Tuition: Odisha</span>
     <span class="global-badge">🇮🇳 Online Pan-India</span>
-    <span class="global-badge">🇺🇸 USA & Canada</span>
-    <span class="global-badge">🇦🇪 Middle East / Gulf</span>
+    <span class="global-badge">🇺🇸 USA &amp; Canada</span>
+    <span class="global-badge">🇦🇪 UAE &amp; Middle East</span>
     <span class="global-badge">🇪🇺 Europe</span>
-    <span class="global-badge">🇦🇺 Australia & NZ</span>
+    <span class="global-badge">🇦🇺 Australia &amp; NZ</span>
   </div>
 
   <!-- MAIN CONTACT AREA: INFO + FORMS -->
   <div class="container">
     <div class="contact-grid">
-      <!-- LEFT: CONTACT INFO & QUICK ACTIONS (updated with global hours) -->
+      <!-- LEFT: CONTACT INFO & QUICK ACTIONS -->
       <div>
         <div class="contact-info-card">
           <h2 style="color: #0f3b5e; margin-bottom: 2rem; font-size: 1.8rem;">📬 Get in touch</h2>
@@ -485,7 +532,7 @@
             <div>
               <strong>Phone / WhatsApp</strong><br>
               <a href="tel:+919937641801" style="color:#0f3b5e; text-decoration:none; font-weight:500;">+91 99376 41801</a><br>
-              <a href="https://wa.me/919937641801" style="color:#25D366; text-decoration:none;" target="_blank">Chat on WhatsApp →</a>
+              <a href="https://wa.me/919937641801" style="color:#25D366; text-decoration:none;" target="_blank" rel="noopener">Chat on WhatsApp →</a>
             </div>
           </div>
 
@@ -518,7 +565,7 @@
 
           <!-- quick buttons inside info card -->
           <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-            <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank" style="flex:1; justify-content: center;">
+            <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank" rel="noopener" style="flex:1; justify-content: center;">
               <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
               </svg>
@@ -529,9 +576,9 @@
         </div>
       </div>
 
-      <!-- RIGHT: TWO FORMS (updated with global curriculum options) -->
+      <!-- RIGHT: TWO FORMS -->
       <div>
-        <!-- STUDENT ENQUIRY FORM (updated with curriculum & location) -->
+        <!-- STUDENT ENQUIRY FORM -->
         <div class="form-card" id="enquiry-form">
           <h2 style="color: #0f3b5e; margin-bottom: 1.5rem; font-size: 1.8rem;">📝 Student Enquiry</h2>
           <form id="studentContactEnquiry" onsubmit="sendStudentEnquiry(event)">
@@ -543,7 +590,7 @@
               <select id="ssubject">
                 <option>Mathematics</option>
                 <option>Science</option>
-                <option>Both Maths & Science</option>
+                <option>Both Maths &amp; Science</option>
               </select>
             </div>
             <div class="double-input">
@@ -583,7 +630,7 @@
           </form>
         </div>
 
-        <!-- TUTOR QUICK JOIN FORM (updated with global experience) -->
+        <!-- TUTOR QUICK JOIN FORM -->
         <div class="form-card">
           <h2 style="color: #0f3b5e; margin-bottom: 1.5rem; font-size: 1.8rem;">👩‍🏫 Quick Tutor Registration</h2>
           <form id="tutorQuickJoin" onsubmit="sendTutorEnquiry(event)">
@@ -627,25 +674,26 @@
     </div>
   </div>
 
-  <!-- CTA BANNER with global message -->
+  <!-- CTA BANNER -->
   <div class="container">
     <div class="cta-banner">
       <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Still have questions? We're just a message away.</h2>
       <p style="font-size:1.2rem; margin-bottom:1rem;">No matter where you are in the world, we're here to help.</p>
       <div class="btn-group">
-        <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801" class="btn btn-wa" target="_blank" rel="noopener">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
           Chat on WhatsApp
         </a>
         <a href="tel:+919937641801" class="btn btn-call">📞 Call Now</a>
+        <a href="free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
         <a href="tutor-join.html" class="btn" style="background: #f59e0b; color:#0f3b5e;">👩‍🏫 Join as Tutor</a>
       </div>
     </div>
   </div>
 
-  <!-- EXPLORE OUR SERVICES (expanded with global & India links) -->
+  <!-- EXPLORE OUR SERVICES -->
   <div class="container" style="text-align: center; margin: 2rem auto;">
     <h2 class="section-title">📍 Explore our tuition services</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-bottom: 1rem;">
@@ -660,22 +708,23 @@
       <a href="india/south-india-online-tuition.html" class="btn btn-outline">South India</a>
       <a href="india/east-india-online-tuition.html" class="btn btn-outline">East India</a>
       <a href="india/west-india-online-tuition.html" class="btn btn-outline">West India</a>
-      <a href="global/usa-tuition.html" class="btn btn-outline">USA & Canada</a>
+      <a href="global/usa-tuition.html" class="btn btn-outline">USA &amp; Canada</a>
       <a href="global/middle-east-tuition.html" class="btn btn-outline">Middle East</a>
+      <a href="global/uae-tuition.html" class="btn btn-outline">UAE</a>
       <a href="global/europe-tuition.html" class="btn btn-outline">Europe</a>
-      <a href="global/australia-tuition.html" class="btn btn-outline">Australia & NZ</a>
+      <a href="global/australia-tuition.html" class="btn btn-outline">Australia &amp; NZ</a>
     </div>
   </div>
 
-  <!-- FOOTER - updated with global & India links -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10: Odisha, India & Worldwide</p>
+          <p>Maths &amp; Science tuition<br>Class 6–10: Odisha, India &amp; Worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
-          <a href="https://wa.me/919937641801">
+          <a href="https://wa.me/919937641801" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -690,27 +739,38 @@
             <a href="cities/cuttack-home-tuition.html">Cuttack</a>
             <a href="cities/rourkela-home-tuition.html">Rourkela</a>
             <a href="cities/sambalpur-home-tuition.html">Sambalpur</a>
-            <a href="cities/angul-home-tuition.html">Angul</a>
-            <a href="cities/balasore-home-tuition.html">Balasore</a>
-            <a href="cities/jajpur-home-tuition.html">Jajpur</a>
           </div>
         </div>
         <div>
           <h4>Pan India online</h4>
           <a href="india/north-india-online-tuition.html">North India</a> | <a href="india/south-india-online-tuition.html">South India</a><br>
-          <a href="india/east-india-online-tuition.html">East & NE</a> | <a href="india/west-india-online-tuition.html">West & Central</a>
+          <a href="india/east-india-online-tuition.html">East &amp; NE</a> | <a href="india/west-india-online-tuition.html">West &amp; Central</a>
         </div>
         <div>
           <h4>Global tuition</h4>
-          <a href="global/usa-tuition.html">USA & Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
-          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia & NZ</a><br>
+          <a href="global/usa-tuition.html">USA &amp; Canada</a> | <a href="global/middle-east-tuition.html">Middle East</a><br>
+          <a href="global/europe-tuition.html">Europe</a> | <a href="global/australia-tuition.html">Australia</a>
+          <div style="margin-top: 0.5rem;">
+            <a href="global/uae-tuition.html">UAE</a> |
+            <a href="global/qatar/">Qatar</a> |
+            <a href="global/saudi-arabia/">Saudi</a> |
+            <a href="global/oman/">Oman</a>
+          </div>
+          <div style="margin-top: 0.5rem;">
+            <a href="global/kuwait/">Kuwait</a> |
+            <a href="global/bahrain/">Bahrain</a>
+          </div>
           <div style="margin-top: 0.8rem;">
-            <a href="about.html">About</a> | <a href="/blog/">Blog</a> | <a href="contact.html">Contact</a><br>
+            <a href="free-assessment.html">Free Assessment</a><br>
+            <a href="about.html">About</a> | <a href="blog/index.html">Blog</a> | <a href="contact.html">Contact</a><br>
             <a href="tutor-join.html">Join as Tutor</a>
+          </div>
+          <div class="sitemap-link">
+            <a href="sitemap.xml">📊 Sitemap</a>
           </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. Maths & Science tuition for Class 6-10, anywhere.</p>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
     </div>
   </footer>
 
@@ -719,7 +779,8 @@
     const toggleBtn = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
     toggleBtn.addEventListener('click', function() {
-      nav.classList.toggle('show');
+      const isOpen = nav.classList.toggle('show');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     // close hamburger menu when a link is clicked
@@ -727,11 +788,12 @@
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 860) {
           nav.classList.remove('show');
+          toggleBtn.setAttribute('aria-expanded', 'false');
         }
       });
     });
 
-    // student enquiry (updated with curriculum & country)
+    // student enquiry
     function sendStudentEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('sname').value.trim();
@@ -746,7 +808,7 @@
       window.open(`https://wa.me/919937641801?text=${msg}`, '_blank');
     }
 
-    // quick tutor join (updated with curriculum)
+    // quick tutor join
     function sendTutorEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('tname').value.trim();
@@ -758,7 +820,6 @@
       const curriculum = document.getElementById('tcurriculum').value;
       const msg = `*Quick tutor registration (contact page)*%0AName: ${name}%0AQualification: ${qual}%0ASubjects: ${subjects}%0ACurricula: ${curriculum}%0ACity/Country: ${city}%0AExperience: ${exp} years%0APhone: ${phone}`;
       window.open(`https://wa.me/919937641801?text=${msg}`, '_blank');
-      // optional redirect
       setTimeout(() => { window.location.href = 'tutor-join.html'; }, 1500);
     }
   </script>
