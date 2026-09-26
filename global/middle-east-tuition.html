@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Middle East & Gulf Online Tuition: Maths & Science Class 6-10 | AcademyExpress</title>
-  <meta name="description" content="Expert online Maths & Science tuition for Class 6-10 students in UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain. IGCSE, CBSE, IB, MOE curricula. Low cost $15–18/hr or 55–70 AED. Book free demo.">
-  <meta name="keywords" content="Middle East online tuition, Gulf tutor, UAE maths tutor, Saudi science tutor, IGCSE tutor Dubai, CBSE tutor Abu Dhabi, IB tutor Qatar, Kuwait online classes, Oman tuition, Bahrain tutor, MOE curriculum">
+  <meta name="description" content="Expert online Maths & Science tuition for Class 6-10 students in UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain. IGCSE, CBSE, IB, MOE curricula. From $15–18/hr or 55–70 AED. Book free demo.">
+  <meta name="keywords" content="Middle East online tuition, Gulf tutor, UAE maths tutor, Saudi science tutor, IGCSE tutor Dubai, CBSE tutor Abu Dhabi, IB tutor Qatar, Kuwait online classes, Oman tuition, Bahrain tutor, MOE curriculum, Gulf online tuition">
   <meta name="author" content="AcademyExpress">
   <link rel="canonical" href="https://www.academyexpress.in/global/middle-east-tuition.html">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Middle East & Gulf Online Tuition: Maths & Science Class 6-10">
   <meta property="og:description" content="Expert online Maths & Science tuition for students in UAE, Saudi, Qatar, Kuwait, Oman, Bahrain. IGCSE, CBSE, IB, MOE. Low cost $15–18/hr.">
@@ -15,6 +16,26 @@
   <meta property="og:url" content="https://www.academyexpress.in/global/middle-east-tuition.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "AcademyExpress Middle East Online Tuition",
+    "url": "https://www.academyexpress.in/global/middle-east-tuition.html",
+    "description": "Online CBSE, IGCSE and IB Maths & Science tuition for Class 6-10 students across the Gulf and Middle East.",
+    "areaServed": [
+      { "@type": "Country", "name": "United Arab Emirates" },
+      { "@type": "Country", "name": "Saudi Arabia" },
+      { "@type": "Country", "name": "Qatar" },
+      { "@type": "Country", "name": "Kuwait" },
+      { "@type": "Country", "name": "Oman" },
+      { "@type": "Country", "name": "Bahrain" }
+    ]
+  }
+  </script>
+
   <style>
     * {
       margin: 0;
@@ -47,7 +68,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    /* Logo styling */
     .logo {
       display: flex;
       align-items: center;
@@ -121,6 +141,10 @@
     .nav-links a:hover {
       color: #f59e0b;
     }
+    .nav-links a.nav-highlight {
+      color: #f59e0b;
+      font-weight: 600;
+    }
     .btn {
       display: inline-block;
       background: #0f3b5e;
@@ -157,12 +181,21 @@
       background: #0f3b5e;
       color: white;
     }
+    .btn-assess {
+      background: #f59e0b;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-assess:hover {
+      background: #d97706;
+    }
     .btn-group {
       display: flex;
       gap: 0.8rem;
       flex-wrap: wrap;
     }
-    /* whatsapp logo svg style */
     .wa-logo {
       width: 18px;
       height: 18px;
@@ -190,12 +223,13 @@
       font-size: 2.8rem;
       color: #0f3b5e;
       margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
     .page-header p {
       font-size: 1.3rem;
       color: #334155;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 850px;
+      margin: 0 auto 1.5rem;
     }
     .section-title {
       font-size: 2.2rem;
@@ -213,7 +247,6 @@
       margin-top: 0.5rem;
       border-radius: 4px;
     }
-    /* region intro */
     .region-highlight {
       background: white;
       border-radius: 48px;
@@ -275,7 +308,6 @@
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
     }
-    /* curriculum cards */
     .curriculum-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -293,6 +325,93 @@
       font-size: 1.6rem;
       margin-bottom: 1rem;
     }
+
+    /* Country cards */
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .country-card {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem 1.6rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .country-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .country-card h3 {
+      font-size: 1.8rem;
+      color: #0f3b5e;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .country-card .price {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #f59e0b;
+      margin: 0.4rem 0 0.6rem;
+    }
+    .country-card .curriculum {
+      font-size: 0.9rem;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 0.35rem 0.9rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 0.4rem 0;
+      align-self: flex-start;
+    }
+    .country-card p {
+      color: #475569;
+      flex-grow: 1;
+      margin: 0.6rem 0 1rem;
+    }
+    .country-card .sub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+    .country-card .sub-links a {
+      color: #0284c7;
+      text-decoration: none;
+      border-bottom: 1px dotted #94a3b8;
+      padding-bottom: 1px;
+    }
+    .country-card .sub-links a:hover {
+      color: #f59e0b;
+      border-bottom-color: #f59e0b;
+    }
+    .country-card .btn-small {
+      background: transparent;
+      border: 2px solid #0f3b5e;
+      color: #0f3b5e;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      text-decoration: none;
+      transition: 0.2s;
+      align-self: flex-start;
+      font-size: 0.95rem;
+    }
+    .country-card .btn-small:hover {
+      background: #0f3b5e;
+      color: white;
+    }
+
     /* enquiry form */
     .enquiry-card {
       background: white;
@@ -318,6 +437,7 @@
       font-size: 1rem;
       background: #f9f9fc;
       transition: all 0.2s;
+      font-family: inherit;
     }
     .enquiry-grid input:focus,
     .enquiry-grid select:focus {
@@ -383,6 +503,10 @@
       gap: 2rem;
       justify-content: space-between;
     }
+    .footer-links > div {
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
     .footer-cities {
       display: flex;
       flex-wrap: wrap;
@@ -391,6 +515,16 @@
     }
     .footer-cities a {
       color: #b9d9f5;
+    }
+    .sitemap-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .sitemap-link a {
+      color: #fbbf24;
+      text-decoration: none;
+      border-bottom: 1px dotted #fbbf24;
     }
     .whatsapp-float {
       position: fixed;
@@ -420,7 +554,13 @@
       height: 36px;
       fill: white;
     }
+    @media (max-width: 1024px) {
+      .container { padding: 1rem 1.5rem; }
+      .page-header h1 { font-size: 2.3rem; }
+      .section-title { font-size: 1.9rem; }
+    }
     @media (max-width: 860px) {
+      .container { padding: 1rem 1.1rem; }
       .menu-toggle {
         display: block;
       }
@@ -436,39 +576,54 @@
         gap: 1rem;
         align-items: flex-start;
       }
-      .nav-links.show {
-        display: flex;
+      .nav-links.show { display: flex; }
+      .nav-links a { white-space: normal; }
+      .nav-links .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
       }
-      .header-flex {
-        flex-wrap: wrap;
-      }
-      .page-header h1 { font-size: 2.2rem; }
+      .header-flex { flex-wrap: wrap; }
+      .page-header h1 { font-size: 2rem; }
+      .page-header p { font-size: 1.05rem; }
       .btn-group { flex-direction: column; width: 100%; }
       .btn { text-align: center; }
-      .enquiry-grid {
-        grid-template-columns: 1fr;
+      .enquiry-grid { grid-template-columns: 1fr; }
+      .full-width { grid-column: span 1; }
+      .logo-icon { width: 40px; height: 40px; font-size: 1.5rem; }
+      .logo-academy { font-size: 1.2rem; }
+      .logo-express { font-size: 1.5rem; }
+      .country-card { padding: 1.6rem 1.3rem; border-radius: 24px; }
+      .country-card h3 { font-size: 1.5rem; }
+      .country-card .price { font-size: 1.25rem; }
+      .country-card .btn-small { width: 100%; text-align: center; }
+      .enquiry-card { padding: 1.6rem 1.2rem; border-radius: 32px; }
+      .cta-banner { padding: 2rem 1.2rem; border-radius: 32px; }
+      .cta-banner h2 { font-size: 1.5rem; }
+      .cta-banner .btn-group .btn { width: 100%; text-align: center; justify-content: center; }
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
       }
-      .full-width {
-        grid-column: span 1;
-      }
-      .logo-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-      }
-      .logo-academy {
-        font-size: 1.2rem;
-      }
-      .logo-express {
-        font-size: 1.5rem;
-      }
+      .wa-icon svg { width: 30px; height: 30px; }
+      .footer { padding: 2.2rem 0 1.5rem; }
+      .footer-links > div { flex: 1 1 100%; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0.9rem 0.9rem; }
+      .page-header h1 { font-size: 1.65rem; }
+      .section-title { font-size: 1.35rem; }
+      .whatsapp-float { width: 52px; height: 52px; bottom: 14px; right: 14px; }
+      .wa-icon svg { width: 28px; height: 28px; }
     }
   </style>
 </head>
 <body>
   <!-- floating whatsapp button -->
-  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20my%20child%20in%20Middle%20East%20/%20Gulf%20(Grades%206-10).%20Please%20share%20details." 
-     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20my%20child%20in%20the%20Middle%20East%20(Class%206-10%20Maths%20/%20Science).%20Please%20share%20details." 
+     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
     <span class="wa-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
@@ -486,16 +641,17 @@
           <span class="logo-express">Express</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="../index.html">Home</a>
         <a href="../services.html">Services</a>
         <a href="../cities/bhubaneswar-home-tuition.html">Cities</a>
-        <a href="/blog/">Blog</a>
+        <a href="../free-assessment.html" class="nav-highlight">🎯 Free Assessment</a>
+        <a href="../blog/index.html">Blog</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
         <a href="../tutor-join.html" class="btn btn-outline">Join as Tutor</a>
-        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20Grades%206-10%20in%20Middle%20East%20/%20Gulf." class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20Class%206-10%20in%20Middle%20East." class="btn btn-wa" target="_blank" rel="noopener">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -509,8 +665,18 @@
   <!-- page title -->
   <section class="page-header">
     <div class="container">
-      <h1>🇦🇪 Online Tuition for Middle East & Gulf</h1>
-      <p>Maths & Science coaching for Grades 6–10 students in UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain. IGCSE, CBSE, IB, MOE curricula. From $15–18/hr | 55–70 AED/hr.</p>
+      <h1>🌍 Online Tuition for Middle East &amp; Gulf</h1>
+      <p>Maths &amp; Science coaching for Class 6–10 students in UAE, Saudi Arabia, Qatar, Kuwait, Oman &amp; Bahrain. IGCSE, CBSE, IB and MOE curricula. From $15–18/hr | 55–70 AED/hr.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="#enquiry-form" class="btn btn-outline">📋 Request Middle East Tutor</a>
+        <a href="../free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20the%20Middle%20East%20-%20Class%20%5Bclass%5D,%20Country%20%5Bcountry%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -519,7 +685,7 @@
     <div class="region-highlight">
       <h2>Expert tutors for Middle Eastern curricula</h2>
       <div class="price-tag">$15 – $18 / hour  |  55 – 70 AED / hour</div>
-      <p>Personalised online classes · Flexible timings (GST timezone) · Concept-based learning</p>
+      <p>Personalised online classes · Flexible timings (Gulf Standard Time) · Concept-based learning</p>
       <div style="margin-top: 1.5rem;">
         <span class="board-badge">IGCSE</span>
         <span class="board-badge">CBSE</span>
@@ -532,9 +698,109 @@
     </div>
   </div>
 
+  <!-- COUNTRIES GRID — Main section -->
+  <div class="container">
+    <h2 class="section-title">🌍 Choose your country</h2>
+    <p style="margin-bottom: 1rem; color: #475569;">Online tuition is available across all 6 Gulf countries. Click a country for city-level details, timings, and pricing.</p>
+
+    <div class="country-grid">
+
+      <!-- UAE -->
+      <div class="country-card">
+        <h3>🇦🇪 United Arab Emirates</h3>
+        <div class="price">55 – 70 AED / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across all 7 emirates — Dubai, Abu Dhabi, Sharjah &amp; more.</p>
+        <div class="sub-links">
+          <a href="uae/dubai-tuition.html">Dubai</a>
+          <a href="uae/abu-dhabi-tuition.html">Abu Dhabi</a>
+          <a href="uae/sharjah-tuition.html">Sharjah</a>
+          <a href="uae/ajman-tuition.html">Ajman</a>
+          <a href="uae/ras-al-khaimah-tuition.html">RAK</a>
+          <a href="uae/fujairah-tuition.html">Fujairah</a>
+          <a href="uae/umm-al-quwain-tuition.html">UAQ</a>
+        </div>
+        <a href="uae-tuition.html" class="btn-small">UAE overview →</a>
+      </div>
+
+      <!-- Saudi Arabia -->
+      <div class="country-card">
+        <h3>🇸🇦 Saudi Arabia</h3>
+        <div class="price">55 – 70 SAR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across the Kingdom — Riyadh, Jeddah, Dammam &amp; more.</p>
+        <div class="sub-links">
+          <a href="saudi-arabia/riyadh-tuition.html">Riyadh</a>
+          <a href="saudi-arabia/jeddah-tuition.html">Jeddah</a>
+          <a href="saudi-arabia/dammam-tuition.html">Dammam</a>
+        </div>
+        <a href="saudi-arabia/" class="btn-small">Saudi overview →</a>
+      </div>
+
+      <!-- Qatar -->
+      <div class="country-card">
+        <h3>🇶🇦 Qatar</h3>
+        <div class="price">55 – 70 QAR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across Qatar — Doha, Al Wakrah, Al Khor, Lusail &amp; more.</p>
+        <div class="sub-links">
+          <a href="qatar/doha-tuition.html">Doha</a>
+          <a href="qatar/al-wakrah-tuition.html">Al Wakrah</a>
+          <a href="qatar/al-khor-tuition.html">Al Khor</a>
+          <a href="qatar/lusail-tuition.html">Lusail</a>
+          <a href="qatar/al-rayyan-tuition.html">Al Rayyan</a>
+        </div>
+        <a href="qatar/" class="btn-small">Qatar overview →</a>
+      </div>
+
+      <!-- Kuwait -->
+      <div class="country-card">
+        <h3>🇰🇼 Kuwait</h3>
+        <div class="price">4.5 – 5.5 KWD / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across Kuwait — Kuwait City, Hawalli, Salmiya &amp; more.</p>
+        <div class="sub-links">
+          <a href="kuwait/kuwait-city-tuition.html">Kuwait City</a>
+          <a href="kuwait/hawalli-tuition.html">Hawalli</a>
+          <a href="kuwait/salmiya-tuition.html">Salmiya</a>
+        </div>
+        <a href="kuwait/" class="btn-small">Kuwait overview →</a>
+      </div>
+
+      <!-- Oman -->
+      <div class="country-card">
+        <h3>🇴🇲 Oman</h3>
+        <div class="price">5.5 – 7 OMR / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across Oman — Muscat, Salalah, Sohar &amp; more.</p>
+        <div class="sub-links">
+          <a href="oman/muscat-tuition.html">Muscat</a>
+          <a href="oman/salalah-tuition.html">Salalah</a>
+          <a href="oman/sohar-tuition.html">Sohar</a>
+        </div>
+        <a href="oman/" class="btn-small">Oman overview →</a>
+      </div>
+
+      <!-- Bahrain -->
+      <div class="country-card">
+        <h3>🇧🇭 Bahrain</h3>
+        <div class="price">5.5 – 7 BHD / hour</div>
+        <span class="curriculum">CBSE · IGCSE · IB · MOE</span>
+        <p>Online Maths &amp; Science tuition across Bahrain — Manama, Riffa, Muharraq &amp; more.</p>
+        <div class="sub-links">
+          <a href="bahrain/manama-tuition.html">Manama</a>
+          <a href="bahrain/riffa-tuition.html">Riffa</a>
+          <a href="bahrain/muharraq-tuition.html">Muharraq</a>
+        </div>
+        <a href="bahrain/" class="btn-small">Bahrain overview →</a>
+      </div>
+
+    </div>
+  </div>
+
   <!-- cities served -->
   <div class="container">
-    <h2 class="section-title">🏙️ Major cities we serve in Middle East & Gulf</h2>
+    <h2 class="section-title">🏙️ Major cities we serve in Middle East &amp; Gulf</h2>
     <div class="city-grid">
       <div class="city-item">Dubai</div>
       <div class="city-item">Abu Dhabi</div>
@@ -564,23 +830,23 @@
   <div class="container">
     <h2 class="section-title">✨ Why families in Middle East trust us</h2>
     <div class="feature-grid">
-      <div class="feature-box"><strong>🎯 Curriculum experts</strong> Specialized in IGCSE, CBSE, IB, MOE, and Gulf national curricula</div>
+      <div class="feature-box"><strong>🎯 Curriculum experts</strong> Specialized in IGCSE, CBSE, IB, MOE and Gulf national curricula</div>
       <div class="feature-box"><strong>🏆 Qualified tutors</strong> Experienced with international schools in UAE, KSA, Qatar, Kuwait</div>
       <div class="feature-box"><strong>📆 Flexible timings</strong> Classes scheduled for Gulf Standard Time (GST) – evenings and weekends</div>
-      <div class="feature-box"><strong>📊 Regular progress</strong> Monthly tests & detailed reports for parents</div>
+      <div class="feature-box"><strong>📊 Regular progress</strong> Monthly tests &amp; detailed reports for parents</div>
     </div>
   </div>
 
   <!-- curriculum details -->
   <div class="container">
-    <h2 class="section-title">📚 Maths & Science curriculum coverage</h2>
+    <h2 class="section-title">📚 Maths &amp; Science curriculum coverage</h2>
     <div class="curriculum-grid">
       <div class="curriculum-card">
         <h3>📐 Mathematics</h3>
-        <p><strong>IGCSE:</strong> Cambridge IGCSE Mathematics (0580, 0607) – Core & Extended.</p>
-        <p><strong>CBSE:</strong> Fully aligned with NCERT curriculum for Class 6-10.</p>
-        <p><strong>IB MYP:</strong> Years 1-5 – all topics covered.</p>
-        <p><strong>MOE & Gulf curricula:</strong> Aligned with UAE, Saudi, Qatar, Kuwait Ministry standards.</p>
+        <p><strong>IGCSE:</strong> Cambridge IGCSE Mathematics (0580, 0607) – Core &amp; Extended.</p>
+        <p><strong>CBSE:</strong> Fully aligned with NCERT curriculum for Class 6–10.</p>
+        <p><strong>IB MYP:</strong> Years 1–5 – all topics covered.</p>
+        <p><strong>MOE &amp; Gulf curricula:</strong> Aligned with UAE, Saudi, Qatar, Kuwait Ministry standards.</p>
       </div>
       <div class="curriculum-card">
         <h3>🔬 Science</h3>
@@ -597,11 +863,11 @@
     <div style="background: #f1f5f9; border-radius: 48px; padding: 2rem; margin: 2rem 0;">
       <h2 class="section-title" style="margin-top: 0;">📌 Curriculum alignment</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-        <div><strong>IGCSE:</strong> Cambridge & Edexcel – Maths, Physics, Chemistry, Biology</div>
-        <div><strong>CBSE:</strong> Complete coverage for Class 6-10 – Maths & Science</div>
-        <div><strong>IB MYP:</strong> Years 1-5 – fully aligned</div>
-        <div><strong>MOE UAE:</strong> Ministry of Education curriculum – Maths & Science</div>
-        <div><strong>Saudi Arabia:</strong> Saudi curriculum – Maths & Science (English medium)</div>
+        <div><strong>IGCSE:</strong> Cambridge &amp; Edexcel – Maths, Physics, Chemistry, Biology</div>
+        <div><strong>CBSE:</strong> Complete coverage for Class 6–10 – Maths &amp; Science</div>
+        <div><strong>IB MYP:</strong> Years 1–5 – fully aligned</div>
+        <div><strong>MOE UAE:</strong> Ministry of Education curriculum – Maths &amp; Science</div>
+        <div><strong>Saudi Arabia:</strong> Saudi curriculum – Maths &amp; Science (English medium)</div>
         <div><strong>Qatar:</strong> Qatar Ministry curriculum – fully covered</div>
         <div><strong>Kuwait:</strong> Kuwait National Curriculum – all topics</div>
       </div>
@@ -612,7 +878,7 @@
   <div class="container">
     <div style="background: white; border-radius: 48px; padding: 2rem; margin: 2rem 0; border: 1px solid #e2e8f0; text-align: center;">
       <h2 style="color: #0f3b5e; margin-bottom: 1rem;">🕒 Classes scheduled for Gulf Standard Time (GST)</h2>
-      <p style="font-size: 1.2rem;">We offer classes in the evenings and on weekends to suit students in UAE, KSA, Qatar, Kuwait, Oman, and Bahrain. Bilingual support available (English & Arabic explanation if needed).</p>
+      <p style="font-size: 1.2rem;">We offer classes in the evenings and on weekends to suit students in UAE, KSA, Qatar, Kuwait, Oman, and Bahrain. Bilingual support available (English &amp; Arabic explanation if needed).</p>
     </div>
   </div>
 
@@ -623,12 +889,18 @@
       <p>Affordable, experienced, and results-oriented. First demo class is free!</p>
       <div class="btn-group">
         <a href="#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Middle East Tutor</a>
-        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Middle%20East%20/%20Gulf%20-%20Grade%20%5Bgrade%5D,%20curriculum%20%5BIGCSE/CBSE/IB/MOE%5D.%20Please%20guide." class="btn btn-wa" target="_blank">💬 Chat on WhatsApp</a>
+        <a href="../free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Middle%20East%20-%20Grade%20%5Bgrade%5D,%20curriculum%20%5BIGCSE/CBSE/IB/MOE%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ENQUIRY FORM for Middle East & Gulf -->
+  <!-- ENQUIRY FORM -->
   <div class="container" id="enquiry-form">
     <h2 class="section-title">📝 Enquire for Middle East tuition</h2>
     <div class="enquiry-card">
@@ -674,7 +946,7 @@
 
   <!-- back to Global link -->
   <div class="container" style="text-align: center; margin: 2rem 0;">
-    <a href="../global/online-tuition.html" class="btn btn-outline">← Back to Global Tuition</a>
+    <a href="online-tuition.html" class="btn btn-outline">← Back to Global Tuition</a>
     <a href="../services.html" class="btn btn-outline" style="margin-left: 1rem;">View All Services</a>
   </div>
 
@@ -684,9 +956,9 @@
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10: Odisha, all India & worldwide</p>
+          <p>Maths &amp; Science tuition<br>Class 6–10: Odisha, India &amp; Worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
-          <a href="https://wa.me/919937641801">
+          <a href="https://wa.me/919937641801" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -695,27 +967,32 @@
         </p>
         </div>
         <div>
-          <h4>Middle East cities</h4>
+          <h4>Middle East countries</h4>
           <div class="footer-cities">
-            <a href="#">Dubai</a>
-            <a href="#">Abu Dhabi</a>
-            <a href="#">Riyadh</a>
-            <a href="#">Doha</a>
-            <a href="#">Kuwait City</a>
-            <a href="#">Muscat</a>
+            <a href="uae-tuition.html">UAE</a>
+            <a href="saudi-arabia/">Saudi Arabia</a>
+            <a href="qatar/">Qatar</a>
+            <a href="kuwait/">Kuwait</a>
+            <a href="oman/">Oman</a>
+            <a href="bahrain/">Bahrain</a>
           </div>
         </div>
         <div>
           <h4>Other regions</h4>
-          <a href="usa-tuition.html">USA & Canada</a> | <a href="europe-tuition.html">Europe</a><br>
+          <a href="usa-tuition.html">USA &amp; Canada</a> | <a href="europe-tuition.html">Europe</a><br>
           <a href="australia-tuition.html">Australia</a> | <a href="../india/online-tuition.html">India</a>
         </div>
         <div>
-          <a href="../about.html">About</a> | <a href="../blog/">Blog</a> | <a href="../contact.html">Contact</a><br>
+          <h4>Explore</h4>
+          <a href="../free-assessment.html">Free Assessment</a><br>
+          <a href="../about.html">About</a> | <a href="../blog/index.html">Blog</a> | <a href="../contact.html">Contact</a><br>
           <a href="../tutor-join.html">Join as Tutor</a>
+          <div class="sitemap-link">
+            <a href="../sitemap.xml">📊 Sitemap</a>
+          </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. Middle East & Gulf tuition for Grades 6-10.</p>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
     </div>
   </footer>
 
@@ -724,10 +1001,20 @@
     const toggleBtn = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
     toggleBtn.addEventListener('click', function() {
-      nav.classList.toggle('show');
+      const isOpen = nav.classList.toggle('show');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // middle east enquiry form: whatsapp prefill
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          nav.classList.remove('show');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Middle East enquiry form: whatsapp prefill
     function sendMiddleEastEnquiry(e) {
       e.preventDefault();
       const name = document.getElementById('mname').value.trim();
@@ -736,19 +1023,10 @@
       const phone = document.getElementById('mphone').value.trim();
       const curriculum = document.getElementById('mcurriculum').value;
       const subject = document.getElementById('msubject').value;
-      
+
       const message = `*Middle East tuition enquiry*%0AStudent: ${name}%0AGrade: ${grade}%0ACurriculum: ${curriculum}%0ASubject: ${subject}%0ACity/Country: ${city}%0APhone: ${phone}`;
       window.open(`https://wa.me/919937641801?text=${message}`, '_blank');
     }
-
-    // close hamburger menu when a link is clicked
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 860) {
-          nav.classList.remove('show');
-        }
-      });
-    });
   </script>
 </body>
 </html>
