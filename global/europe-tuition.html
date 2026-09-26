@@ -8,6 +8,7 @@
   <meta name="keywords" content="Europe online tuition, UK tutor, IGCSE tutor, IB tutor Europe, maths tutor Germany, science tutor France, online tutoring London, Paris tutor, Berlin online classes, European curriculum">
   <meta name="author" content="AcademyExpress">
   <link rel="canonical" href="https://www.academyexpress.in/global/europe-tuition.html">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Europe Online Tuition: Maths & Science Class 6-10">
   <meta property="og:description" content="Expert online Maths & Science tuition for students across Europe. IGCSE, IB, UK Curriculum, local European standards. Low cost €16–20/hr.">
@@ -15,6 +16,38 @@
   <meta property="og:url" content="https://www.academyexpress.in/global/europe-tuition.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "AcademyExpress Europe Online Tuition",
+    "url": "https://www.academyexpress.in/global/europe-tuition.html",
+    "description": "Online Maths & Science tuition for students across Europe.",
+    "areaServed": [
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Germany" },
+      { "@type": "Country", "name": "France" },
+      { "@type": "Country", "name": "Spain" },
+      { "@type": "Country", "name": "Italy" },
+      { "@type": "Country", "name": "Netherlands" },
+      { "@type": "Country", "name": "Switzerland" },
+      { "@type": "Country", "name": "Ireland" },
+      { "@type": "Country", "name": "Sweden" },
+      { "@type": "Country", "name": "Norway" },
+      { "@type": "Country", "name": "Denmark" },
+      { "@type": "Country", "name": "Finland" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "16",
+      "description": "Online tuition from €16/hour for Grades 6-10 Maths & Science"
+    }
+  }
+  </script>
+
   <style>
     * {
       margin: 0;
@@ -47,7 +80,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    /* Logo styling */
     .logo {
       display: flex;
       align-items: center;
@@ -121,6 +153,10 @@
     .nav-links a:hover {
       color: #f59e0b;
     }
+    .nav-links a.nav-highlight {
+      color: #f59e0b;
+      font-weight: 600;
+    }
     .btn {
       display: inline-block;
       background: #0f3b5e;
@@ -157,12 +193,21 @@
       background: #0f3b5e;
       color: white;
     }
+    .btn-assess {
+      background: #f59e0b;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-assess:hover {
+      background: #d97706;
+    }
     .btn-group {
       display: flex;
       gap: 0.8rem;
       flex-wrap: wrap;
     }
-    /* whatsapp logo svg style */
     .wa-logo {
       width: 18px;
       height: 18px;
@@ -190,12 +235,13 @@
       font-size: 2.8rem;
       color: #0f3b5e;
       margin-bottom: 0.5rem;
+      line-height: 1.2;
     }
     .page-header p {
       font-size: 1.3rem;
       color: #334155;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 850px;
+      margin: 0 auto 1.5rem;
     }
     .section-title {
       font-size: 2.2rem;
@@ -318,6 +364,7 @@
       font-size: 1rem;
       background: #f9f9fc;
       transition: all 0.2s;
+      font-family: inherit;
     }
     .enquiry-grid input:focus,
     .enquiry-grid select:focus {
@@ -360,6 +407,11 @@
       font-size: 2.2rem;
       margin-bottom: 1rem;
     }
+    .cta-banner p {
+      font-size: 1.15rem;
+      color: #dbeafe;
+      margin-bottom: 0.5rem;
+    }
     .cta-banner .btn-group {
       justify-content: center;
       margin-top: 2rem;
@@ -383,6 +435,10 @@
       gap: 2rem;
       justify-content: space-between;
     }
+    .footer-links > div {
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
     .footer-cities {
       display: flex;
       flex-wrap: wrap;
@@ -391,6 +447,16 @@
     }
     .footer-cities a {
       color: #b9d9f5;
+    }
+    .sitemap-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .sitemap-link a {
+      color: #fbbf24;
+      text-decoration: none;
+      border-bottom: 1px dotted #fbbf24;
     }
     .whatsapp-float {
       position: fixed;
@@ -420,7 +486,13 @@
       height: 36px;
       fill: white;
     }
+    @media (max-width: 1024px) {
+      .container { padding: 1rem 1.5rem; }
+      .page-header h1 { font-size: 2.3rem; }
+      .section-title { font-size: 1.9rem; }
+    }
     @media (max-width: 860px) {
+      .container { padding: 1rem 1.1rem; }
       .menu-toggle {
         display: block;
       }
@@ -436,39 +508,49 @@
         gap: 1rem;
         align-items: flex-start;
       }
-      .nav-links.show {
-        display: flex;
+      .nav-links.show { display: flex; }
+      .nav-links a { white-space: normal; }
+      .nav-links .btn {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
       }
-      .header-flex {
-        flex-wrap: wrap;
-      }
-      .page-header h1 { font-size: 2.2rem; }
+      .header-flex { flex-wrap: wrap; }
+      .page-header h1 { font-size: 2rem; }
+      .page-header p { font-size: 1.05rem; }
       .btn-group { flex-direction: column; width: 100%; }
       .btn { text-align: center; }
-      .enquiry-grid {
-        grid-template-columns: 1fr;
+      .enquiry-grid { grid-template-columns: 1fr; }
+      .full-width { grid-column: span 1; }
+      .logo-icon { width: 40px; height: 40px; font-size: 1.5rem; }
+      .logo-academy { font-size: 1.2rem; }
+      .logo-express { font-size: 1.5rem; }
+      .cta-banner { padding: 2rem 1.2rem; border-radius: 32px; }
+      .cta-banner h2 { font-size: 1.6rem; }
+      .cta-banner .btn-group .btn { width: 100%; text-align: center; justify-content: center; }
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 18px;
+        right: 18px;
       }
-      .full-width {
-        grid-column: span 1;
-      }
-      .logo-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-      }
-      .logo-academy {
-        font-size: 1.2rem;
-      }
-      .logo-express {
-        font-size: 1.5rem;
-      }
+      .wa-icon svg { width: 30px; height: 30px; }
+      .footer { padding: 2.2rem 0 1.5rem; }
+      .footer-links > div { flex: 1 1 100%; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0.9rem 0.9rem; }
+      .page-header h1 { font-size: 1.65rem; }
+      .section-title { font-size: 1.35rem; }
+      .whatsapp-float { width: 52px; height: 52px; bottom: 14px; right: 14px; }
+      .wa-icon svg { width: 28px; height: 28px; }
     }
   </style>
 </head>
 <body>
   <!-- floating whatsapp button -->
   <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%20need%20a%20tutor%20for%20my%20child%20in%20Europe%20(Grades%206-10).%20Please%20share%20details." 
-     class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+     class="whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
     <span class="wa-icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
@@ -486,16 +568,17 @@
           <span class="logo-express">Express</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="../index.html">Home</a>
         <a href="../services.html">Services</a>
         <a href="../cities/bhubaneswar-home-tuition.html">Cities</a>
-        <a href="/blog/">Blog</a>
+        <a href="../free-assessment.html" class="nav-highlight">🎯 Free Assessment</a>
+        <a href="../blog/index.html">Blog</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
         <a href="../tutor-join.html" class="btn btn-outline">Join as Tutor</a>
-        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20Grades%206-10%20in%20Europe." class="btn btn-wa" target="_blank">
+        <a href="https://wa.me/919937641801?text=Hello%20AcademyExpress%2C%20I%27m%20interested%20in%20tuition%20for%20Grades%206-10%20in%20Europe." class="btn btn-wa" target="_blank" rel="noopener">
           <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
           </svg>
@@ -510,7 +593,17 @@
   <section class="page-header">
     <div class="container">
       <h1>🇪🇺 Online Tuition for Europe</h1>
-      <p>Maths & Science coaching for students across Europe – UK, Germany, France, Spain, Italy, Switzerland, Netherlands, and more. IGCSE, IB, UK Curriculum, local European standards. From €16–20/hour.</p>
+      <p>Maths &amp; Science coaching for students across Europe – UK, Germany, France, Spain, Italy, Switzerland, Netherlands, and more. IGCSE, IB, UK Curriculum, local European standards. From €16–20/hour.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="#enquiry-form" class="btn btn-outline">📋 Request Europe Tutor</a>
+        <a href="../free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Europe%20-%20Grade%20%5Bgrade%5D,%20curriculum%20%5BIGCSE/IB/UK/German/French%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -577,17 +670,17 @@
       <div class="feature-box"><strong>🎯 Curriculum experts</strong> Specialized in IGCSE, IB, UK Curriculum, and major European national standards</div>
       <div class="feature-box"><strong>🏆 Qualified tutors</strong> Experienced with international and local schools across Europe</div>
       <div class="feature-box"><strong>📆 Flexible timings</strong> Classes scheduled for GMT, CET, and EET time zones – evenings and weekends</div>
-      <div class="feature-box"><strong>📊 Regular progress</strong> Monthly tests & detailed reports for parents</div>
+      <div class="feature-box"><strong>📊 Regular progress</strong> Monthly tests &amp; detailed reports for parents</div>
     </div>
   </div>
 
   <!-- curriculum details -->
   <div class="container">
-    <h2 class="section-title">📚 Maths & Science curriculum coverage</h2>
+    <h2 class="section-title">📚 Maths &amp; Science curriculum coverage</h2>
     <div class="curriculum-grid">
       <div class="curriculum-card">
         <h3>📐 Mathematics</h3>
-        <p><strong>IGCSE:</strong> Cambridge IGCSE Mathematics (0580, 0607) – Core & Extended, Edexcel IGCSE.</p>
+        <p><strong>IGCSE:</strong> Cambridge IGCSE Mathematics (0580, 0607) – Core &amp; Extended, Edexcel IGCSE.</p>
         <p><strong>IB MYP:</strong> Years 1-5 – all topics covered.</p>
         <p><strong>UK Curriculum:</strong> Key Stage 3, GCSE Maths (all boards).</p>
         <p><strong>European Curricula:</strong> German Gymnasium, French Collège, Spanish ESO, Italian Scuola Secondaria – fully aligned.</p>
@@ -604,10 +697,10 @@
 
   <!-- country-specific curriculum highlights -->
   <div class="container">
-    <div style="background: #f1f5f9; border-radius: 48px; padding: 2rem; margin: 2rem 0;">
+    <div style="background: #f1f5f9; border-radius: 48px; padding: 2rem; margin: 2rem 0; border: 1px solid #e2e8f0;">
       <h2 class="section-title" style="margin-top: 0;">📌 European curriculum alignment</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-        <div><strong>United Kingdom:</strong> KS3, GCSE (AQA, Edexcel, OCR) – Maths & Science</div>
+        <div><strong>United Kingdom:</strong> KS3, GCSE (AQA, Edexcel, OCR) – Maths &amp; Science</div>
         <div><strong>Germany:</strong> Gymnasium, Realschule – Mathematik, Physik, Chemie, Biologie</div>
         <div><strong>France:</strong> Collège – Mathématiques, Physique-Chimie, SVT</div>
         <div><strong>Spain:</strong> ESO – Matemáticas, Física y Química, Biología</div>
@@ -634,12 +727,18 @@
       <p>Affordable, experienced, and results-oriented. First demo class is free!</p>
       <div class="btn-group">
         <a href="#enquiry-form" class="btn btn-outline" style="background: white; color:#0f3b5e;">📋 Request Europe Tutor</a>
-        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Europe%20-%20Grade%20%5Bgrade%5D,%20curriculum%20%5BIGCSE/IB/UK/German/French%5D.%20Please%20guide." class="btn btn-wa" target="_blank">💬 Chat on WhatsApp</a>
+        <a href="../free-assessment.html" class="btn btn-assess">🎯 Free Assessment</a>
+        <a href="https://wa.me/919937641801?text=I'm%20looking%20for%20a%20tutor%20in%20Europe%20-%20Grade%20%5Bgrade%5D,%20curriculum%20%5BIGCSE/IB/UK/German/French%5D.%20Please%20guide." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ENQUIRY FORM for Europe -->
+  <!-- ENQUIRY FORM -->
   <div class="container" id="enquiry-form">
     <h2 class="section-title">📝 Enquire for Europe tuition</h2>
     <div class="enquiry-card">
@@ -684,9 +783,9 @@
     </div>
   </div>
 
-  <!-- back to Global link -->
+  <!-- back links -->
   <div class="container" style="text-align: center; margin: 2rem 0;">
-    <a href="../global/online-tuition.html" class="btn btn-outline">← Back to Global Tuition</a>
+    <a href="online-tuition.html" class="btn btn-outline">← Back to Global Tuition</a>
     <a href="../services.html" class="btn btn-outline" style="margin-left: 1rem;">View All Services</a>
   </div>
 
@@ -696,9 +795,9 @@
       <div class="footer-links">
         <div>
           <h4>AcademyExpress</h4>
-          <p>Maths & Science tuition<br>Class 6–10: Odisha, all India & worldwide</p>
+          <p>Maths &amp; Science tuition<br>Class 6–10: Odisha, India &amp; Worldwide</p>
           <p>📞 <a href="tel:+919937641801">+91 99376 41801</a><br>
-          <a href="https://wa.me/919937641801">
+          <a href="https://wa.me/919937641801" target="_blank" rel="noopener">
             <svg class="wa-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.548 6.193 2.54 11.393c-.003 1.747.456 3.457 1.328 4.985L2.25 21.75l5.422-1.56c1.473.865 3.133 1.322 4.83 1.324h.004c5.199 0 9.454-4.195 9.462-9.396.004-2.51-.97-4.87-2.856-6.757zM12.03 20.023h-.003c-1.497 0-2.966-.403-4.24-1.16l-.304-.18-3.347.962.998-3.25-.185-.316a8.29 8.29 0 0 1-1.272-4.42c.007-4.57 3.724-8.285 8.3-8.285 2.216 0 4.3.865 5.867 2.434a8.222 8.222 0 0 1 2.428 5.88c-.008 4.57-3.724 8.28-8.292 8.28zm4.553-6.207c-.25-.125-1.475-.728-1.703-.81-.228-.083-.394-.125-.56.125-.166.249-.645.81-.79.976-.146.166-.292.187-.542.062-.895-.372-1.484-.662-2.097-1.235-.158-.147-.297-.31-.428-.482.23-.208.426-.447.58-.71.146-.249.195-.416.292-.694.098-.277.049-.52-.024-.676-.073-.156-.56-1.35-.77-1.85-.202-.482-.408-.416-.56-.424-.146-.008-.313-.008-.48-.008-.167 0-.438.062-.667.312-.23.25-.876.856-.876 2.088 0 1.232.896 2.422 1.022 2.59.125.166 1.75 2.675 4.238 3.664.592.235 1.054.375 1.414.48.595.175 1.136.15 1.564.09.477-.066 1.475-.602 1.683-1.184.208-.582.208-1.08.146-1.184-.062-.104-.23-.166-.48-.29z"/>
             </svg>
@@ -719,15 +818,20 @@
         </div>
         <div>
           <h4>Other regions</h4>
-          <a href="usa-tuition.html">USA & Canada</a> | <a href="middle-east-tuition.html">Middle East</a><br>
+          <a href="usa-tuition.html">USA &amp; Canada</a> | <a href="middle-east-tuition.html">Middle East</a><br>
           <a href="australia-tuition.html">Australia</a> | <a href="../india/online-tuition.html">India</a>
         </div>
         <div>
-          <a href="../about.html">About</a> | <a href="../blog/">Blog</a> | <a href="../contact.html">Contact</a><br>
+          <h4>Explore</h4>
+          <a href="../free-assessment.html">Free Assessment</a><br>
+          <a href="../about.html">About</a> | <a href="../blog/index.html">Blog</a> | <a href="../contact.html">Contact</a><br>
           <a href="../tutor-join.html">Join as Tutor</a>
+          <div class="sitemap-link">
+            <a href="../sitemap.xml">📊 Sitemap</a>
+          </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. Europe tuition for Grades 6-10.</p>
+      <p style="text-align: center; margin-top: 3rem; opacity: 0.8;">© 2025 AcademyExpress. All rights reserved.</p>
     </div>
   </footer>
 
@@ -736,7 +840,17 @@
     const toggleBtn = document.getElementById('menuToggle');
     const nav = document.getElementById('navLinks');
     toggleBtn.addEventListener('click', function() {
-      nav.classList.toggle('show');
+      const isOpen = nav.classList.toggle('show');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          nav.classList.remove('show');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
 
     // europe enquiry form: whatsapp prefill
@@ -748,19 +862,10 @@
       const phone = document.getElementById('ephone').value.trim();
       const curriculum = document.getElementById('ecurriculum').value;
       const subject = document.getElementById('esubject').value;
-      
+
       const message = `*Europe tuition enquiry*%0AStudent: ${name}%0AGrade/Year: ${grade}%0ACurriculum: ${curriculum}%0ASubject: ${subject}%0ACity/Country: ${city}%0APhone: ${phone}`;
       window.open(`https://wa.me/919937641801?text=${message}`, '_blank');
     }
-
-    // close hamburger menu when a link is clicked
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 860) {
-          nav.classList.remove('show');
-        }
-      });
-    });
   </script>
 </body>
 </html>
